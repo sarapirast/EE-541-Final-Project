@@ -1,0 +1,997 @@
+text,intent,entities,label
+i want to make a round trip flight from washington to san francisco and return,flight,round_trip=round trip;fromloc.city_name=washington;toloc.city_name=san francisco,11
+what are the coach fares from charlotte to la wednesday night,airfare,class_type=coach;fromloc.city_name=charlotte;toloc.city_name=la;depart_date.day_name=wednesday;depart_time.period_of_day=night,3
+now i need a flight from detroit to san diego leaving tuesday evening,flight,fromloc.city_name=detroit;toloc.city_name=san diego;depart_date.day_name=tuesday;depart_time.period_of_day=evening,11
+houston airports,airport,city_name=houston,7
+show me the cheapest one way fares from san diego to miami,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=san diego;toloc.city_name=miami,3
+show me the latest flight to love field,flight,flight_mod=latest;toloc.airport_name=love field,11
+show me the qx fare flights between atlanta and oakland on delta airlines,flight,fare_basis_code=qx fare;fromloc.city_name=atlanta;toloc.city_name=oakland;airline_name=delta airlines,11
+i 'd like to see flights from pittsburgh to philadelphia,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+find me the cheapest flight from boston to washington,flight,cost_relative=cheapest;fromloc.city_name=boston;toloc.city_name=washington,11
+could you give me a flight between pittsburgh and philadelphia,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+show me the least expensive flight from miami to cleveland on sunday after noon,flight,cost_relative=least expensive;fromloc.city_name=miami;toloc.city_name=cleveland;depart_date.day_name=sunday;depart_time.time_relative=after;depart_time.time=noon,11
+show me the earliest flights from boston to denver on wednesday,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=denver;depart_date.day_name=wednesday,11
+i 'm looking for a flight traveling from boston to denver one way and the cheapest way possible,flight,fromloc.city_name=boston;toloc.city_name=denver;round_trip=one way;cost_relative=cheapest,11
+show me the nonstop flights from atlanta to oakland that leave in the afternoon and arrive between 430 pm and 630 pm,flight,flight_stop=nonstop;fromloc.city_name=atlanta;toloc.city_name=oakland;arrive_time.period_of_day=afternoon;arrive_time.start_time=430 pm;arrive_time.end_time=630 pm,11
+i 'd like to see flights from baltimore to atlanta,flight,fromloc.city_name=baltimore;toloc.city_name=atlanta,11
+show me all flights from baltimore to philadelphia,flight,fromloc.city_name=baltimore;toloc.city_name=philadelphia,11
+what kinds of planes are used by american airlines,aircraft,airline_name=american airlines,1
+on the flight from baltimore to san francisco on us air leaving at 420 what type of aircraft is used,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco;airline_name=us air;depart_time.time=420,11
+list all flights on continental leaving denver,flight,airline_name=continental;fromloc.city_name=denver,11
+show afternoon flights from dallas to san francisco,flight,depart_time.period_of_day=afternoon;fromloc.city_name=dallas;toloc.city_name=san francisco,11
+show me all flights from boston to denver which arrive in denver wednesday before noon,flight,fromloc.city_name=boston;toloc.city_name=denver;toloc.city_name=denver;arrive_date.day_name=wednesday;arrive_time.time_relative=before;arrive_time.time=noon,11
+all flights from washington dc to san francisco after 5 pm on november twelfth economy class,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=san francisco;depart_time.time_relative=after;depart_time.time=5 pm;depart_date.month_name=november;depart_date.day_number=twelfth;economy=economy class,11
+what is the airfare between denver and pittsburgh,airfare,fromloc.city_name=denver;toloc.city_name=pittsburgh,3
+i need information for ground transportation denver colorado,ground_service,city_name=denver;state_name=colorado,17
+what are the flights dallas to boston on monday morning,flight,fromloc.city_name=dallas;toloc.city_name=boston;depart_date.day_name=monday;depart_time.period_of_day=morning,11
+give me flights from atlanta to baltimore,flight,fromloc.city_name=atlanta;toloc.city_name=baltimore,11
+is there a flight leaving at 1505 from pittsburgh to baltimore on july twenty fifth 1991,flight,depart_time.time=1505;fromloc.city_name=pittsburgh;toloc.city_name=baltimore;depart_date.month_name=july;depart_date.day_number=twenty fifth;depart_date.year=1991,11
+what is the cheapest flight from boston to atlanta,flight,cost_relative=cheapest;fromloc.city_name=boston;toloc.city_name=atlanta,11
+list all flights from new york to las vegas that fly nonstop on sunday and list flights from memphis to las vegas that fly nonstop on sunday,flight,fromloc.city_name=new york;toloc.city_name=las vegas;flight_stop=nonstop;depart_date.day_name=sunday;fromloc.city_name=memphis;toloc.city_name=las vegas;flight_stop=nonstop;depart_date.day_name=sunday,11
+what is the first flight from atlanta to boston on thursday september fifth that leaves after 8 am,flight,flight_mod=first;fromloc.city_name=atlanta;toloc.city_name=boston;depart_date.day_name=thursday;depart_date.month_name=september;depart_date.day_number=fifth;depart_time.time_relative=after;depart_time.time=8 am,11
+thank you for that information now i would like information on a flight on april sixteen from atlanta to philadelphia early in the morning,flight,depart_date.month_name=april;depart_date.day_number=sixteen;fromloc.city_name=atlanta;toloc.city_name=philadelphia;depart_time.period_mod=early;depart_time.period_of_day=morning,11
+what is the cost of flights from denver to san francisco,airfare,fromloc.city_name=denver;toloc.city_name=san francisco,3
+show me the cheapest fare from baltimore to dallas,airfare,cost_relative=cheapest;fromloc.city_name=baltimore;toloc.city_name=dallas,3
+i 'd like to see the flights from denver to philadelphia again,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+show me the flights from boston to san francisco,flight,fromloc.city_name=boston;toloc.city_name=san francisco,11
+show me the flights from atlanta to baltimore,flight,fromloc.city_name=atlanta;toloc.city_name=baltimore,11
+what flights are available friday from philadelphia to oakland,flight,depart_date.day_name=friday;fromloc.city_name=philadelphia;toloc.city_name=oakland,11
+i would like to fly from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+okay and can you tell me for flights departing from dallas to philadelphia the latest flight you would have departing from dallas to philadelphia,flight,fromloc.city_name=dallas;toloc.city_name=philadelphia;flight_mod=latest;fromloc.city_name=dallas;toloc.city_name=philadelphia,11
+please show me airlines with flights from denver to boston stop philadelphia,airline,fromloc.city_name=denver;toloc.city_name=boston;stoploc.city_name=philadelphia,5
+which is the flight number for the us air flight from philadelphia to boston is it 279 or is it 137338,flight_no,airline_name=us air;fromloc.city_name=philadelphia;toloc.city_name=boston;flight_number=279;or=or;flight_number=137338,14
+please list ground transport in san francisco,ground_service,city_name=san francisco,17
+could you please show me all the weekday flights between denver and dallas,flight,flight_mod=weekday;fromloc.city_name=denver;toloc.city_name=dallas,11
+show me all flights from san diego to miami with a stop in denver,flight,fromloc.city_name=san diego;toloc.city_name=miami;stoploc.city_name=denver,11
+what ground transportation is available in san francisco,ground_service,city_name=san francisco,17
+i would like to book a flight from denver to pittsburgh on july fifteenth i 'd like it to be the cheapest flight,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_date.month_name=july;depart_date.day_number=fifteenth;cost_relative=cheapest,11
+what flights from tampa to cincinnati,flight,fromloc.city_name=tampa;toloc.city_name=cincinnati,11
+which airlines fly between boston and philadelphia,airline,fromloc.city_name=boston;toloc.city_name=philadelphia,5
+list flights from phoenix to detroit on thursday june twenty fourth,flight,fromloc.city_name=phoenix;toloc.city_name=detroit;depart_date.day_name=thursday;depart_date.month_name=june;depart_date.day_number=twenty fourth,11
+all flights to baltimore after 6 pm,flight,toloc.city_name=baltimore;depart_time.time_relative=after;depart_time.time=6 pm,11
+i need information for flights leaving san francisco on thursday evening and returning to boston,flight,fromloc.city_name=san francisco;depart_date.day_name=thursday;depart_time.period_of_day=evening;toloc.city_name=boston,11
+please give me ground transportation information for denver,ground_service,city_name=denver,17
+what is the economy thrift fare from boston to washington,airfare,economy=economy;class_type=thrift;fromloc.city_name=boston;toloc.city_name=washington,3
+when can i fly from philadelphia to dallas on a saturday morning,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.day_name=saturday;depart_time.period_of_day=morning,11
+show me us air flights from san francisco to pittsburgh on tuesday,flight,airline_name=us air;fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=tuesday,11
+what is the earliest flight leaving boston and arriving in atlanta on november seventh,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=atlanta;arrive_date.month_name=november;arrive_date.day_number=seventh,11
+how far from the airport in the dallas fort worth airport is dallas,distance,fromloc.airport_name=dallas fort worth airport;fromloc.city_name=dallas,10
+are there any american airlines flights flying into pittsburgh between 12 and 4 in the afternoon,flight,airline_name=american airlines;toloc.city_name=pittsburgh;depart_time.start_time=12;depart_time.end_time=4;depart_time.period_of_day=afternoon,11
+list all flights from washington dc to tampa florida,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=tampa;toloc.state_name=florida,11
+i also need service from dallas to boston arriving by noon,flight,fromloc.city_name=dallas;toloc.city_name=boston;arrive_time.time_relative=by;arrive_time.time=noon,11
+i would like information on ground transportation in the city of atlanta from airport to downtown,ground_service,city_name=atlanta,17
+i 'd like information on boston to washington,flight,fromloc.city_name=boston;toloc.city_name=washington,11
+show me airlines going from pittsburgh going to denver and then continuing to san francisco on monday,airline,fromloc.city_name=pittsburgh;toloc.city_name=denver;toloc.city_name=san francisco;depart_date.day_name=monday,5
+i 'd like to make a trip from washington to san francisco,flight,fromloc.city_name=washington;toloc.city_name=san francisco,11
+does american airlines fly from pittsburgh to atlanta,flight,airline_name=american airlines;fromloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+show me the earliest flight on wednesday from baltimore to newark,flight,flight_mod=earliest;depart_date.day_name=wednesday;fromloc.city_name=baltimore;toloc.city_name=newark,11
+do you have a flight from philadelphia to san francisco with a stopover in dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+show me all flights to dallas that are less than 1500 dollars round trip,flight,toloc.city_name=dallas;cost_relative=less;fare_amount=1500 dollars;round_trip=round trip,11
+what does the fare code qw mean,abbreviation,fare_basis_code=qw,0
+information on round trip flights from pittsburgh to san francisco first class,flight,round_trip=round trip;fromloc.city_name=pittsburgh;toloc.city_name=san francisco;class_type=first class,11
+flights from newark to cleveland 5 o'clock pm daily,flight,fromloc.city_name=newark;toloc.city_name=cleveland;depart_time.time=5 o'clock pm;flight_days=daily,11
+what flights from cincinnati to tampa,flight,fromloc.city_name=cincinnati;toloc.city_name=tampa,11
+what flights are between washington and san francisco,flight,fromloc.city_name=washington;toloc.city_name=san francisco,11
+what is the earliest flight from boston to dallas fort worth leaving august eighth,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=dallas fort worth;depart_date.month_name=august;depart_date.day_number=eighth,11
+how many passengers fit on a d9s,capacity,aircraft_code=d9s,8
+what is fare code qo mean,abbreviation,fare_basis_code=qo,0
+what flights are available friday afternoon from philadelphia to oakland california,flight,depart_date.day_name=friday;depart_time.period_of_day=afternoon;fromloc.city_name=philadelphia;toloc.city_name=oakland;toloc.state_name=california,11
+list all united flights from boston to san francisco with fare code qx,flight,airline_name=united;fromloc.city_name=boston;toloc.city_name=san francisco;fare_basis_code=qx,11
+can you tell me the cheapest one way fare from boston to san francisco,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=boston;toloc.city_name=san francisco,3
+what 's the last flight from houston to dallas,flight,flight_mod=last;fromloc.city_name=houston;toloc.city_name=dallas,11
+hi i 'd like a flight from tampa to montreal,flight,fromloc.city_name=tampa;toloc.city_name=montreal,11
+list all flights that leave from baltimore or denver or pittsburgh and arrive in philadelphia,flight,fromloc.city_name=baltimore;or=or;fromloc.city_name=denver;or=or;fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+show me flights from denver to philadelphia,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+i would like a nonstop flight from new york to las vegas on march second,flight,flight_stop=nonstop;fromloc.city_name=new york;toloc.city_name=las vegas;arrive_date.month_name=march;arrive_date.day_number=second,11
+i want to fly from boston to atlanta i would like the cheapest fare please,flight,fromloc.city_name=boston;toloc.city_name=atlanta;cost_relative=cheapest,11
+flights from newark to boston,flight,fromloc.city_name=newark;toloc.city_name=boston,11
+what 's the cost of a first class fare from philadelphia to san francisco,airfare,class_type=first class;fromloc.city_name=philadelphia;toloc.city_name=san francisco,3
+is there a round trip flight from baltimore to denver connecting in dallas,flight,round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=denver;connect=connecting;stoploc.city_name=dallas,11
+give me the first flight from boston to atlanta,flight,flight_mod=first;fromloc.city_name=boston;toloc.city_name=atlanta,11
+please give me all the flights from long beach california to memphis tennessee,flight,fromloc.city_name=long beach;fromloc.state_name=california;toloc.city_name=memphis;toloc.state_name=tennessee,11
+i 'm interested in flying from atlanta to boston i 'd like to fly during breakfast,flight,fromloc.city_name=atlanta;toloc.city_name=boston;meal_description=breakfast,11
+what flights fly from denver to san francisco on monday tuesday wednesday thursday and friday,flight,fromloc.city_name=denver;toloc.city_name=san francisco;depart_date.day_name=monday;depart_date.day_name=tuesday;depart_date.day_name=wednesday;depart_date.day_name=thursday;depart_date.day_name=friday,11
+i 'd like flight information between boston and washington september third,flight,fromloc.city_name=boston;toloc.city_name=washington;depart_date.month_name=september;depart_date.day_number=third,11
+find travel arrangements for a round trip flight from dallas to pittsburgh after 8 pm,flight,round_trip=round trip;fromloc.city_name=dallas;toloc.city_name=pittsburgh;depart_time.time_relative=after;depart_time.time=8 pm,11
+of all airlines which airline has the most arrivals in atlanta,airline,mod=most;toloc.city_name=atlanta,5
+what does it cost to fly from boston to oakland on united airlines,airfare,fromloc.city_name=boston;toloc.city_name=oakland;airline_name=united airlines,3
+baltimore to philadelphia wednesday,flight,fromloc.city_name=baltimore;toloc.city_name=philadelphia;depart_date.day_name=wednesday,11
+show me the airlines for flights to or from love field,airline,fromloc.airport_name=love field,5
+what types of ground transportation are there to san francisco airport,ground_service,toloc.airport_name=san francisco airport,17
+flights from denver to chicago on sunday on continental,flight,fromloc.city_name=denver;toloc.city_name=chicago;depart_date.day_name=sunday;airline_name=continental,11
+what is airline dl,airline,airline_code=dl,5
+show me the airlines that use love field,airline,airport_name=love field,5
+what 's the earliest flight from san jose to houston,flight,flight_mod=earliest;fromloc.city_name=san jose;toloc.city_name=houston,11
+show me all the flights arriving in charlotte around 5 pm next monday please,flight,toloc.city_name=charlotte;arrive_time.time_relative=around;arrive_time.time=5 pm;arrive_date.date_relative=next;arrive_date.day_name=monday,11
+what does mco mean,abbreviation,airport_code=mco,0
+how many fare codes belong to economy class,quantity,economy=economy class,20
+i 'm looking for flights from pittsburgh to philadelphia leaving before 9 am,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia;depart_time.time_relative=before;depart_time.time=9 am,11
+how much does it cost to fly from boston to atlanta,airfare,fromloc.city_name=boston;toloc.city_name=atlanta,3
+atlanta to pittsburgh,flight,fromloc.city_name=atlanta;toloc.city_name=pittsburgh,11
+show me all flights from baltimore to dallas,flight,fromloc.city_name=baltimore;toloc.city_name=dallas,11
+round trip fares new york to san jose,airfare,round_trip=round trip;fromloc.city_name=new york;toloc.city_name=san jose,3
+list all arrivals from any airport to baltimore on thursday morning arriving before 9 am,flight,toloc.city_name=baltimore;depart_date.day_name=thursday;depart_time.period_of_day=morning;arrive_time.time_relative=before;arrive_time.time=9 am,11
+what 's the price of the least expensive first class round trip ticket on us air from cleveland to miami,airfare,cost_relative=least expensive;class_type=first class;round_trip=round trip;airline_name=us air;fromloc.city_name=cleveland;toloc.city_name=miami,3
+would you be able to put me on a flight with delta leaving the morning of august twenty seventh from baltimore to san francisco,flight,airline_name=delta;depart_time.period_of_day=morning;depart_date.month_name=august;depart_date.day_number=twenty seventh;fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+what flights go from atlanta to washington dc on thursday,flight,fromloc.city_name=atlanta;toloc.city_name=washington;toloc.state_code=dc;depart_date.day_name=thursday,11
+show me the cities served by nationair,city,airline_name=nationair,9
+show me the flights from oakland to washington,flight,fromloc.city_name=oakland;toloc.city_name=washington,11
+all flights from boston to washington,flight,fromloc.city_name=boston;toloc.city_name=washington,11
+which airlines fly from boston to washington dc but stopover in some other city,airline,fromloc.city_name=boston;toloc.city_name=washington;toloc.state_code=dc,5
+i would like to fly from boston to baltimore in the afternoon what flights are there,flight,fromloc.city_name=boston;toloc.city_name=baltimore;depart_time.period_of_day=afternoon,11
+find a flight from washington dc to san francisco on tuesday,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=san francisco;depart_date.day_name=tuesday,11
+what are the coach fares for flights from newark to la leaving after 3 pm,airfare,class_type=coach;fromloc.city_name=newark;toloc.city_name=la;depart_time.time_relative=after;depart_time.time=3 pm,3
+morning flight from boston to philadelphia,flight,depart_time.period_of_day=morning;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+what is the code for business class,abbreviation,class_type=business class,0
+show me the first class fares from baltimore to dallas,airfare,class_type=first class;fromloc.city_name=baltimore;toloc.city_name=dallas,3
+list the flights on sunday afternoon from oakland to dallas,flight,depart_date.day_name=sunday;depart_time.period_of_day=afternoon;fromloc.city_name=oakland;toloc.city_name=dallas,11
+i would like to book a flight on us air first class from cleveland to miami on february twenty fourth,flight,airline_name=us air;class_type=first class;fromloc.city_name=cleveland;toloc.city_name=miami;depart_date.month_name=february;depart_date.day_number=twenty fourth,11
+the earliest flight from boston to san francisco please that will be serving a meal,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=san francisco;meal=meal,11
+flight from milwaukee to chicago,flight,fromloc.city_name=milwaukee;toloc.city_name=chicago,11
+what ground transportation is available from the denver airport to downtown denver,ground_service,fromloc.airport_name=denver airport;toloc.city_name=denver,17
+all the flights from baltimore to san francisco,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+may i have a listing of flights from minneapolis to long beach california on wednesday,flight,fromloc.city_name=minneapolis;toloc.city_name=long beach;toloc.state_name=california;depart_date.day_name=wednesday,11
+can you tell me the cheapest flight between boston and san francisco,flight,cost_relative=cheapest;fromloc.city_name=boston;toloc.city_name=san francisco,11
+is it possible for me to fly from baltimore to san francisco,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+on april twenty would like to fly from denver to pittsburgh at about 8 o'clock in the morning,flight,depart_date.month_name=april;depart_date.day_number=twenty;fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_time.time_relative=about;depart_time.time=8 o'clock;depart_time.period_of_day=morning,11
+okay i 'd like to fly from denver to pittsburgh,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+show flights between toronto and san francisco,flight,fromloc.city_name=toronto;toloc.city_name=san francisco,11
+show departures and arrivals in atlanta for american airlines,flight,city_name=atlanta;airline_name=american airlines,11
+what is the latest flight from philadelphia to boston,flight,flight_mod=latest;fromloc.city_name=philadelphia;toloc.city_name=boston,11
+what kind of plane flies from boston to pittsburgh after noon,aircraft,fromloc.city_name=boston;toloc.city_name=pittsburgh;depart_time.time_relative=after;depart_time.time=noon,1
+what 're the cheapest flights from new york to miami,flight,cost_relative=cheapest;fromloc.city_name=new york;toloc.city_name=miami,11
+what is your earliest flight from boston to washington on august twenty seventh,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=washington;depart_date.month_name=august;depart_date.day_number=twenty seventh,11
+do you have flights from st. petersburg to toronto on monday,flight,fromloc.city_name=st. petersburg;toloc.city_name=toronto;depart_date.day_name=monday,11
+show me the price of all flights from atlanta to washington dc,airfare,fromloc.city_name=atlanta;toloc.city_name=washington;toloc.state_code=dc,3
+can i go from boston to san francisco with a stopover in denver,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=denver,11
+i would like to find the cheapest one way fare from boston to oakland,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=boston;toloc.city_name=oakland,3
+give me the flights from milwaukee to st. louis leaving sunday morning,flight,fromloc.city_name=milwaukee;toloc.city_name=st. louis;depart_date.day_name=sunday;depart_time.period_of_day=morning,11
+i need a flight from san francisco to pittsburgh and then pittsburgh to new york and new york to san francisco,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;fromloc.city_name=pittsburgh;toloc.city_name=new york;fromloc.city_name=new york;toloc.city_name=san francisco,11
+okay what flights are there us air from orlando to cleveland leaving in the afternoon,flight,airline_name=us air;fromloc.city_name=orlando;toloc.city_name=cleveland;depart_time.period_of_day=afternoon,11
+what are the flights from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+find me the earliest flight from boston to atlanta,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=atlanta,11
+i need a flight from philadelphia to denver,flight,fromloc.city_name=philadelphia;toloc.city_name=denver,11
+find a flight from san francisco to boston on wednesday,flight,fromloc.city_name=san francisco;toloc.city_name=boston;depart_date.day_name=wednesday,11
+now list for me only the united flights that flight from oakland to boston,flight,airline_name=united;fromloc.city_name=oakland;toloc.city_name=boston,11
+is there a direct flight from denver to pittsburgh in the morning of august thirty first that is nonstop,flight,connect=direct;fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_time.period_of_day=morning;depart_date.month_name=august;depart_date.day_number=thirty first;flight_stop=nonstop,11
+what are the flights from philadelphia to dallas on october first 1991,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.month_name=october;depart_date.day_number=first;depart_date.year=1991,11
+are there any direct flights from atlanta to philadelphia arriving in philadelphia about 12 noon,flight,connect=direct;fromloc.city_name=atlanta;toloc.city_name=philadelphia;toloc.city_name=philadelphia;arrive_time.time_relative=about;arrive_time.time=12 noon,11
+show me a list of flights from san francisco to boston for august thirtieth,flight,fromloc.city_name=san francisco;toloc.city_name=boston;depart_date.month_name=august;depart_date.day_number=thirtieth,11
+what is the earliest flight from boston that will arrive in denver,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=denver,11
+what is the first flight after 12 noon from washington for denver,flight,flight_mod=first;depart_time.time_relative=after;depart_time.time=12 noon;fromloc.city_name=washington;toloc.city_name=denver,11
+what are the flights which depart from san francisco fly to washington via indianapolis and arrive by 9 pm,flight,fromloc.city_name=san francisco;toloc.city_name=washington;stoploc.city_name=indianapolis;arrive_time.time_relative=by;arrive_time.time=9 pm,11
+what is the latest flight i can take from washington to san francisco,flight,flight_mod=latest;fromloc.city_name=washington;toloc.city_name=san francisco,11
+i want a flight on twa from boston to san francisco,flight,airline_code=twa;fromloc.city_name=boston;toloc.city_name=san francisco,11
+where is general mitchell international located,city,airport_name=general mitchell international,9
+what flights leave atlanta at about 3 in the afternoon and arrive in san francisco,flight,fromloc.city_name=atlanta;depart_time.time_relative=about;depart_time.time=3;depart_time.period_of_day=afternoon;toloc.city_name=san francisco,11
+give me flights from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+show me the flights from miami to denver,flight,fromloc.city_name=miami;toloc.city_name=denver,11
+list nonstop flights from baltimore washington to oakland that arrive between 445 and 515 pm,flight,flight_stop=nonstop;fromloc.city_name=baltimore;fromloc.city_name=washington;toloc.city_name=oakland;arrive_time.start_time=445;arrive_time.end_time=515 pm,11
+please list the flights for me that leave dallas on tuesday morning and arrive in atlanta,flight,fromloc.city_name=dallas;depart_date.day_name=tuesday;depart_time.period_of_day=morning;toloc.city_name=atlanta,11
+i need a flight from baltimore to seattle that stops in minneapolis,flight,fromloc.city_name=baltimore;toloc.city_name=seattle;stoploc.city_name=minneapolis,11
+what flights are there from newark to tampa,flight,fromloc.city_name=newark;toloc.city_name=tampa,11
+tuesday morning flights between charlotte and baltimore,flight,depart_date.day_name=tuesday;depart_time.period_of_day=morning;fromloc.city_name=charlotte;toloc.city_name=baltimore,11
+how much is a flight from washington to montreal,airfare,fromloc.city_name=washington;toloc.city_name=montreal,3
+i 'd like to arrange a trip to baltimore on january first,flight,toloc.city_name=baltimore;depart_date.month_name=january;depart_date.day_number=first,11
+i would like to fly from denver to boston on wednesday the twenty first,flight,fromloc.city_name=denver;toloc.city_name=boston;depart_date.day_name=wednesday;depart_date.day_number=twenty first,11
+show me all direct flights from dallas fort worth to either san francisco or oakland,flight,connect=direct;fromloc.city_name=dallas fort worth;toloc.city_name=san francisco;or=or;toloc.city_name=oakland,11
+show nonstop flights from new york to miami on a tuesday which cost less than 466 dollars one way,flight,flight_stop=nonstop;fromloc.city_name=new york;toloc.city_name=miami;arrive_date.day_name=tuesday;cost_relative=less;fare_amount=466 dollars;round_trip=one way,11
+list flights between denver and pittsburgh,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+please list all the flights from boston to san francisco leaving before 10 am,flight,fromloc.city_name=boston;toloc.city_name=san francisco;depart_time.time_relative=before;depart_time.time=10 am,11
+which are the least expensive flights between dallas and baltimore on july nineteenth,flight,cost_relative=least expensive;fromloc.city_name=dallas;toloc.city_name=baltimore;depart_date.month_name=july;depart_date.day_number=nineteenth,11
+what flights do you have between oakland and boston with a stopover in dallas fort worth,flight,fromloc.city_name=oakland;toloc.city_name=boston;stoploc.city_name=dallas fort worth,11
+i want to travel from philadelphia to san francisco with a stopover in dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+please find a flight on delta from philadelphia to san francisco and give me the flight numbers,flight,airline_name=delta;fromloc.city_name=philadelphia;toloc.city_name=san francisco,11
+give me a list of flights between pittsburgh and baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+what is the thrift economy flight fare from washington to san francisco,airfare,class_type=thrift;economy=economy;fromloc.city_name=washington;toloc.city_name=san francisco,3
+show me the morning flights from boston to philadelphia,flight,depart_time.period_of_day=morning;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+give me a flight from tampa to charlotte on sunday,flight,fromloc.city_name=tampa;toloc.city_name=charlotte;depart_date.day_name=sunday,11
+what 's the latest flight i can get from dallas to boston,flight,flight_mod=latest;fromloc.city_name=dallas;toloc.city_name=boston,11
+give me flights from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+what flights from st. paul to kansas city on friday with supper served,flight,fromloc.city_name=st. paul;toloc.city_name=kansas city;depart_date.day_name=friday;meal_description=supper,11
+i would like a flight from philadelphia to san francisco but i would like to stop in dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+find me the latest flight leaving atlanta august seventh and arriving in denver,flight,flight_mod=latest;fromloc.city_name=atlanta;depart_date.month_name=august;depart_date.day_number=seventh;toloc.city_name=denver,11
+what are your flights from denver to baltimore,flight,fromloc.city_name=denver;toloc.city_name=baltimore,11
+show me flights from new york to miami,flight,fromloc.city_name=new york;toloc.city_name=miami,11
+please show me flights from pittsburgh to boston on saturday morning after 8 am,flight,fromloc.city_name=pittsburgh;toloc.city_name=boston;depart_date.day_name=saturday;depart_time.period_of_day=morning;depart_time.time_relative=after;depart_time.time=8 am,11
+please list any flights from oakland california to philadelphia on tuesday,flight,fromloc.city_name=oakland;fromloc.state_name=california;toloc.city_name=philadelphia;depart_date.day_name=tuesday,11
+i need a flight from kansas city to chicago next wednesday that reaches chicago around 7 in the evening,flight,fromloc.city_name=kansas city;toloc.city_name=chicago;depart_date.date_relative=next;depart_date.day_name=wednesday;toloc.city_name=chicago;arrive_time.time_relative=around;arrive_time.time=7;arrive_time.period_of_day=evening,11
+i 'd like the earliest flight from dallas to boston,flight,flight_mod=earliest;fromloc.city_name=dallas;toloc.city_name=boston,11
+i am looking for the cheapest fare from indianapolis to orlando on december twenty seventh,airfare,cost_relative=cheapest;fromloc.city_name=indianapolis;toloc.city_name=orlando;depart_date.month_name=december;depart_date.day_number=twenty seventh,3
+do you have any flights from denver to baltimore via dallas,flight,fromloc.city_name=denver;toloc.city_name=baltimore;stoploc.city_name=dallas,11
+show me the airlines that fly from toronto to boston,airline,fromloc.city_name=toronto;toloc.city_name=boston,5
+what flights are there from san francisco to philadelphia daily with economy class,flight,fromloc.city_name=san francisco;toloc.city_name=philadelphia;flight_days=daily;economy=economy class,11
+show me the flights before 8 am on august second from boston to denver on delta,flight,depart_time.time_relative=before;depart_time.time=8 am;depart_date.month_name=august;depart_date.day_number=second;fromloc.city_name=boston;toloc.city_name=denver;airline_name=delta,11
+show me all flights from philadelphia to san francisco with one stop in dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;flight_stop=one stop;stoploc.city_name=dallas,11
+show me all flights from san francisco to pittsburgh on friday,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=friday,11
+i am interested in booking an early morning flight from dallas into houston on february twenty second and returning late in the evening of february twenty second,flight,depart_time.period_of_day=am;depart_time.period_of_day=early;depart_time.period_of_day=morning;fromloc.city_name=dallas;toloc.city_name=houston;depart_date.month_name=february;depart_date.day_number=twenty second;return_time.period_of_day=evening;return_date.month_name=february;return_date.day_number=twenty second,11
+first class american flight from philadelphia to dallas on wednesday,flight,class_type=first class;airline_name=american;fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.day_name=wednesday,11
+list all the flights from atlanta to philadelphia on august the first,flight,fromloc.city_name=atlanta;toloc.city_name=philadelphia;depart_date.month_name=august;depart_date.day_number=first,11
+what airlines fly from philadelphia to san francisco,airline,fromloc.city_name=philadelphia;toloc.city_name=san francisco,5
+show me the flights from boston to pittsburgh,flight,fromloc.city_name=boston;toloc.city_name=pittsburgh,11
+what are the flights from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+what 's the first flight from dallas to houston,flight,flight_mod=first;fromloc.city_name=dallas;toloc.city_name=houston,11
+show me airlines between boston and san francisco,airline,fromloc.city_name=boston;toloc.city_name=san francisco,5
+i 'd like a list of all the flights from san francisco to pittsburgh on sunday please,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=sunday,11
+i need to know if there are any direct flights from st. petersburg florida to tacoma washington leaving preferably tomorrow morning,flight,connect=direct;fromloc.city_name=st. petersburg;fromloc.state_name=florida;toloc.city_name=tacoma;toloc.state_name=washington;depart_date.today_relative=tomorrow;depart_time.period_of_day=morning,11
+what is the first flight from boston to atlanta,flight,flight_mod=first;fromloc.city_name=boston;toloc.city_name=atlanta,11
+show me a list of flights on american airlines from boston to dc on july twenty second,flight,airline_name=american airlines;fromloc.city_name=boston;toloc.state_code=dc;depart_date.month_name=july;depart_date.day_number=twenty second,11
+from philadelphia to toronto,flight,fromloc.city_name=philadelphia;toloc.city_name=toronto,11
+please give me flights from atlanta to boston on wednesday afternoon and thursday morning,flight,fromloc.city_name=atlanta;toloc.city_name=boston;depart_date.day_name=wednesday;depart_time.period_of_day=afternoon;depart_date.day_name=thursday;depart_time.period_of_day=morning,11
+list least expensive flight from dallas to baltimore,flight,cost_relative=least expensive;fromloc.city_name=dallas;toloc.city_name=baltimore,11
+show me flights from philadelphia to san francisco on wednesdays,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;depart_date.day_name=wednesdays,11
+show me flights from dallas to baltimore,flight,fromloc.city_name=dallas;toloc.city_name=baltimore,11
+flights from san francisco august one,flight,fromloc.city_name=san francisco;depart_date.month_name=august;depart_date.day_number=one,11
+what flights go to san francisco from boston,flight,toloc.city_name=san francisco;fromloc.city_name=boston,11
+show me non first class flights from baltimore to dallas,flight,class_type=first class;fromloc.city_name=baltimore;toloc.city_name=dallas,11
+i want an early morning flight between philadelphia and pittsburgh on tuesday morning,flight,depart_time.period_of_day=early;depart_time.period_of_day=morning;fromloc.city_name=philadelphia;toloc.city_name=pittsburgh;depart_date.day_name=tuesday;depart_time.period_of_day=morning,11
+all flights and fares from atlanta to dallas round trip after 12 pm less than 1100 dollars,flight+airfare,fromloc.city_name=atlanta;toloc.city_name=dallas;round_trip=round trip;depart_time.time_relative=after;depart_time.time=12 pm;cost_relative=less;fare_amount=1100 dollars,12
+what are the cheapest flights from pittsburgh to atlanta,flight,cost_relative=cheapest;fromloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+show me all the united airlines flights leaving dallas,flight,airline_name=united airlines;fromloc.city_name=dallas,11
+show me the flights going from pittsburgh to san francisco on monday,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.day_name=monday,11
+what are the first class fares from boston to pittsburgh on thursday,airfare,class_type=first class;fromloc.city_name=boston;toloc.city_name=pittsburgh;depart_date.day_name=thursday,3
+show me flights from boston to baltimore coach on wednesday about 12 noon,flight,fromloc.city_name=boston;toloc.city_name=baltimore;class_type=coach;depart_date.day_name=wednesday;depart_time.time_relative=about;depart_time.time=12 noon,11
+what does dfw mean,abbreviation,airport_code=dfw,0
+what does fn under fare code mean,abbreviation,fare_basis_code=fn,0
+list the flight from philadelphia to san francisco on american airlines,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;airline_name=american airlines,11
+i 'd like to see all the economy fares from baltimore to philadelphia,airfare,economy=economy;fromloc.city_name=baltimore;toloc.city_name=philadelphia,3
+what is the schedule for flights between pittsburgh and boston on the evening of july ninth,flight_time,flight_time=schedule for flights;fromloc.city_name=pittsburgh;toloc.city_name=boston;depart_time.period_of_day=evening;depart_date.month_name=july;depart_date.day_number=ninth,15
+list all day time flights from pittsburgh to boston,flight,flight_mod=day time;fromloc.city_name=pittsburgh;toloc.city_name=boston,11
+are there any flights before 12 noon on june fifteenth from long beach to columbus,flight,depart_time.time_relative=before;depart_time.time=12 noon;depart_date.month_name=june;depart_date.day_number=fifteenth;fromloc.city_name=long beach;toloc.city_name=columbus,11
+i want to fly philadelphia to dallas on july eighth,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.month_name=july;depart_date.day_number=eighth,11
+which delta flights fly from boston to philadelphia,flight,airline_name=delta;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+show me the flights arriving at love field,flight,toloc.airport_name=love field,11
+i 'm trying to fly from denver to boston and i want a flight that serves a meal,flight,fromloc.city_name=denver;toloc.city_name=boston;meal=meal,11
+please show me flights from atlanta to oakland california on thursday after 1600 hours,flight,fromloc.city_name=atlanta;toloc.city_name=oakland;toloc.state_name=california;depart_date.day_name=thursday;depart_time.time_relative=after;depart_time.time=1600 hours,11
+i would like to travel from boston to denver early in the morning,flight,fromloc.city_name=boston;toloc.city_name=denver;depart_time.period_mod=early;depart_time.period_of_day=morning,11
+can you tell me about flights from san jose to nashville on saturday afternoon,flight,fromloc.city_name=san jose;toloc.city_name=nashville;depart_date.day_name=saturday;depart_time.period_of_day=afternoon,11
+what does us mean,abbreviation,airline_code=us,0
+find the latest flight from san francisco to atlanta that serves a meal,flight,flight_mod=latest;fromloc.city_name=san francisco;toloc.city_name=atlanta;meal=meal,11
+can you tell me which flights go from memphis to tacoma and make a stop in los angeles,flight,fromloc.city_name=memphis;toloc.city_name=tacoma;stoploc.city_name=los angeles,11
+what 's the airport at orlando,airport,city_name=orlando,7
+philadelphia to san francisco monday,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;depart_date.day_name=monday,11
+give me the american airlines flights from phoenix to milwaukee on wednesday,flight,airline_name=american airlines;fromloc.city_name=phoenix;toloc.city_name=milwaukee;depart_date.day_name=wednesday,11
+show me the cheapest flight from pittsburgh to atlanta on wednesday which leaves before noon and serves breakfast,flight,cost_relative=cheapest;fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_date.day_name=wednesday;depart_time.time_relative=before;depart_time.time=noon;meal_description=breakfast,11
+i want a flight from montreal quebec to san diego california that leaves sunday,flight,fromloc.city_name=montreal;fromloc.state_name=quebec;toloc.city_name=san diego;toloc.state_name=california;depart_date.day_name=sunday,11
+which airlines fly from boston to san francisco,airline,fromloc.city_name=boston;toloc.city_name=san francisco,5
+what are the flights on tuesday october first from atlanta to baltimore,flight,depart_date.day_name=tuesday;depart_date.month_name=october;class_type=first;fromloc.city_name=atlanta;toloc.city_name=baltimore,11
+nonstop flights from new york city to las vegas on sunday,flight,flight_stop=nonstop;fromloc.city_name=new york city;toloc.city_name=las vegas;arrive_date.day_name=sunday,11
+show me the united flights from bwi to denver,flight,airline_name=united;fromloc.airport_code=bwi;toloc.city_name=denver,11
+what flight leaves dallas for atlanta on august twenty seventh in the evening,flight,fromloc.city_name=dallas;toloc.city_name=atlanta;depart_date.month_name=august;depart_date.day_number=twenty seventh;depart_time.period_of_day=evening,11
+i 'd like to find the earliest flight possible from san francisco to atlanta,flight,flight_mod=earliest;fromloc.city_name=san francisco;toloc.city_name=atlanta,11
+please list all northwest flights into denver,flight,airline_name=northwest;toloc.city_name=denver,11
+display all flights leaving from toronto to san diego on us air laying over in washington dc,flight,fromloc.city_name=toronto;toloc.city_name=san diego;airline_name=us air;stoploc.city_name=washington;stoploc.state_code=dc,11
+flights from st. paul to houston,flight,fromloc.city_name=st. paul;toloc.city_name=houston,11
+how many nonstop flights going from dallas to oakland july twenty seventh,quantity,flight_stop=nonstop;fromloc.city_name=dallas;toloc.city_name=oakland;arrive_date.month_name=july;arrive_date.day_number=twenty seventh,20
+what airlines fly between boston and san francisco and stop in denver,airline,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=denver,5
+now i need a one way flight from pittsburgh to denver,flight,round_trip=one way;fromloc.city_name=pittsburgh;toloc.city_name=denver,11
+what is the latest flight from washington dc to denver,flight,flight_mod=latest;fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=denver,11
+i 'd like a flight on united airlines from dallas to san francisco that leaves after 815 am,flight,airline_name=united airlines;fromloc.city_name=dallas;toloc.city_name=san francisco;depart_time.time_relative=after;depart_time.time=815 am,11
+what are my choices of flights from las vegas to new york,flight,fromloc.city_name=las vegas;toloc.city_name=new york,11
+what is the latest flight on wednesday going from atlanta to washington dc,flight,flight_mod=latest;depart_date.day_name=wednesday;fromloc.city_name=atlanta;toloc.city_name=washington;toloc.state_code=dc,11
+list all flights from atlanta to baltimore thursday morning,flight,fromloc.city_name=atlanta;toloc.city_name=baltimore;depart_date.day_name=thursday;depart_time.period_of_day=morning,11
+what is airline nw,airline,airline_code=nw,5
+does any airline have an early afternoon flight from boston to pittsburgh,airline,depart_time.period_of_day=early;depart_time.period_of_day=afternoon;fromloc.city_name=boston;toloc.city_name=pittsburgh,5
+which airlines fly between boston and pittsburgh,airline,fromloc.city_name=boston;toloc.city_name=pittsburgh,5
+flights from las vegas to montreal,flight,fromloc.city_name=las vegas;toloc.city_name=montreal,11
+please list flights between denver and boston,flight,fromloc.city_name=denver;toloc.city_name=boston,11
+what first class flights are available on july twenty fifth 1991 from denver to baltimore,flight,class_type=first class;depart_date.month_name=july;depart_date.day_number=twenty fifth;depart_date.year=1991;fromloc.city_name=denver;toloc.city_name=baltimore,11
+is there a round trip flight from baltimore to dallas connecting in denver,flight,round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=dallas;connect=connecting;stoploc.city_name=denver,11
+i need a flight from long beach to st. louis stopping in dallas the flight should also serve lunch,flight,fromloc.city_name=long beach;toloc.city_name=st. louis;stoploc.city_name=dallas;meal_description=lunch,11
+okay show me all the flights to baltimore,flight,toloc.city_name=baltimore,11
+what is the cheapest flight from long beach to memphis,flight,cost_relative=cheapest;fromloc.city_name=long beach;toloc.city_name=memphis,11
+i 'm interested in round trip flights from boston to washington,flight,round_trip=round trip;fromloc.city_name=boston;toloc.city_name=washington,11
+what is the cheapest flight from denver to pittsburgh,flight,cost_relative=cheapest;fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+all flights and fares from dallas,flight+airfare,fromloc.city_name=dallas,12
+list flights from san jose to houston next sunday,flight,fromloc.city_name=san jose;toloc.city_name=houston;depart_date.date_relative=next;depart_date.day_name=sunday,11
+i wish to book a flight from pittsburgh to atlanta coach discount fare,flight,fromloc.city_name=pittsburgh;toloc.city_name=atlanta;class_type=coach,11
+can you give me a list of the flights from atlanta to boston,flight,fromloc.city_name=atlanta;toloc.city_name=boston,11
+what is the latest flight from boston to denver that serves a meal,flight,flight_mod=latest;fromloc.city_name=boston;toloc.city_name=denver;meal=meal,11
+i 'd like to fly between boston and san francisco,flight,fromloc.city_name=boston;toloc.city_name=san francisco,11
+what does fare code qo mean,abbreviation,fare_basis_code=qo,0
+please list the shortest one stop flight from ontario california to orlando florida,flight,flight_mod=shortest;flight_stop=one stop;fromloc.city_name=ontario;fromloc.state_name=california;toloc.city_name=orlando;toloc.state_name=florida,11
+i 'd like to see all flights from pittsburgh to philadelphia again,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+show me flights from san francisco to seattle,flight,fromloc.city_name=san francisco;toloc.city_name=seattle,11
+flights from pittsburgh to baltimore arriving between 4 and 5 pm,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore;arrive_time.start_time=4;arrive_time.end_time=5 pm,11
+list all daily flights between boston and oakland and between oakland and boston using delta airlines,flight,flight_days=daily;fromloc.city_name=boston;toloc.city_name=oakland;fromloc.city_name=oakland;toloc.city_name=boston;airline_name=delta airlines,11
+can you show me the available flights from baltimore to dallas with economy fares,flight,fromloc.city_name=baltimore;toloc.city_name=dallas;economy=economy,11
+how can i go from the san francisco airport to downtown san francisco,flight,fromloc.airport_name=san francisco airport;toloc.city_name=san francisco,11
+ground transportation in las vegas,ground_service,city_name=las vegas,17
+show me times for coach flights between boston and baltimore on wednesday,flight_time,flight_time=times;class_type=coach;fromloc.city_name=boston;toloc.city_name=baltimore;depart_date.day_name=wednesday,15
+give me the continental flights from chicago to seattle on saturday morning,flight,airline_name=continental;fromloc.city_name=chicago;toloc.city_name=seattle;depart_date.day_name=saturday;depart_time.period_of_day=morning,11
+show me the cheapest flights round trip from new york to san jose arriving in san jose before 7 pm,flight,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=new york;toloc.city_name=san jose;toloc.city_name=san jose;arrive_time.time_relative=before;arrive_time.time=7 pm,11
+show me the cheapest fare from dallas to baltimore,airfare,cost_relative=cheapest;fromloc.city_name=dallas;toloc.city_name=baltimore,3
+list the flights that leave from philadelphia to atlanta early thursday morning before 8 am,flight,fromloc.city_name=philadelphia;toloc.city_name=atlanta;depart_time.period_mod=early;depart_date.day_name=thursday;depart_time.period_of_day=morning;depart_time.time_relative=before;depart_time.time=8 am,11
+find me the cheapest one way fare i can get from boston to denver,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=boston;toloc.city_name=denver,3
+what type of plane is an m80,aircraft,aircraft_code=m80,1
+i need a list of late afternoon flights from st. louis to chicago,flight,depart_time.period_of_day=late afternoon;fromloc.city_name=st. louis;toloc.city_name=chicago,11
+list all flights please from washington to san francisco,flight,fromloc.city_name=washington;toloc.city_name=san francisco,11
+which united airlines flights go through denver,flight,airline_name=united airlines;stoploc.city_name=denver,11
+list all nonstop flights on sunday from tampa to charlotte,flight,flight_stop=nonstop;arrive_date.day_name=sunday;fromloc.city_name=tampa;toloc.city_name=charlotte,11
+what do you have going from atlanta to philadelphia serving breakfast,flight,fromloc.city_name=atlanta;toloc.city_name=philadelphia;meal_description=breakfast,11
+okay that sounds great let 's go from atlanta on april twenty one in the morning to dallas least expensive fare one way,flight,fromloc.city_name=atlanta;depart_date.month_name=april;depart_date.day_number=twenty one;depart_time.period_of_day=morning;toloc.city_name=dallas;cost_relative=least expensive;round_trip=one way,11
+what flights leave phoenix on wednesday evening and arrive in milwaukee,flight,fromloc.city_name=phoenix;depart_date.day_name=wednesday;depart_time.period_of_day=evening;toloc.city_name=milwaukee,11
+what ground transportation is available at the atlanta airport,ground_service,airport_name=atlanta airport,17
+what is united airlines service between boston and san francisco,flight,airline_name=united airlines;fromloc.city_name=boston;toloc.city_name=san francisco,11
+display all the flights from baltimore to dallas which leave after 4 pm,flight,fromloc.city_name=baltimore;toloc.city_name=dallas;depart_time.time_relative=after;depart_time.time=4 pm,11
+i need a ticket from los angeles to charlotte that leaves early in the morning,airfare,fromloc.city_name=los angeles;toloc.city_name=charlotte;depart_time.period_mod=early;depart_time.period_of_day=morning,3
+flights from montreal and phoenix to las vegas,flight,fromloc.city_name=montreal;fromloc.city_name=phoenix;toloc.city_name=las vegas,11
+does twa have a flight from indianapolis to houston arriving at 11 am,flight,airline_code=twa;fromloc.city_name=indianapolis;toloc.city_name=houston;arrive_time.time=11 am,11
+on continental flight 1765 from boston to san francisco what type of meal is served,flight,airline_name=continental;flight_number=1765;fromloc.city_name=boston;toloc.city_name=san francisco;meal=meal,11
+i 'd like to fly from boston to san francisco,flight,fromloc.city_name=boston;toloc.city_name=san francisco,11
+what is the cheapest one way ticket from denver to pittsburgh,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=denver;toloc.city_name=pittsburgh,3
+find me a flight from boston to san francisco with layover in denver on united,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=denver;airline_name=united,11
+show all monday flights from san francisco to pittsburgh,flight,depart_date.day_name=monday;fromloc.city_name=san francisco;toloc.city_name=pittsburgh,11
+show me the aircraft that canadian airlines uses,aircraft,airline_name=canadian airlines,1
+what flights does delta have from denver to dallas after 5,flight,airline_name=delta;fromloc.city_name=denver;toloc.city_name=dallas;depart_time.time_relative=after;depart_time.time=5,11
+show me all flights from indianapolis,flight,fromloc.city_name=indianapolis,11
+show me flights from milwaukee to orlando on wednesday night,flight,fromloc.city_name=milwaukee;toloc.city_name=orlando;depart_date.day_name=wednesday;depart_time.period_of_day=night,11
+what is the coach fare between boston and atlanta on delta,airfare,class_type=coach;fromloc.city_name=boston;toloc.city_name=atlanta;airline_name=delta,3
+could you find me a flight from boston to san francisco that stops in denver,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=denver,11
+list round trip flights between boston and oakland using twa,flight,round_trip=round trip;fromloc.city_name=boston;toloc.city_name=oakland;airline_code=twa,11
+i 'd like flight information from dallas fort worth to boston on tuesday,flight,fromloc.city_name=dallas fort worth;toloc.city_name=boston;depart_date.day_name=tuesday,11
+what am flights are available from pittsburgh to boston,flight,depart_time.period_of_day=am;fromloc.city_name=pittsburgh;toloc.city_name=boston,11
+show me flights from boston to san francisco,flight,fromloc.city_name=boston;toloc.city_name=san francisco,11
+what is the last flight to atlanta from baltimore,flight,flight_mod=last;toloc.city_name=atlanta;fromloc.city_name=baltimore,11
+list all flights departing from general mitchell,flight,fromloc.airport_name=general mitchell,11
+does eastern have an early afternoon flight from boston to san francisco,flight,airline_name=eastern;depart_time.period_of_day=early;depart_time.period_of_day=afternoon;fromloc.city_name=boston;toloc.city_name=san francisco,11
+all flights from charlotte to anywhere on us air,flight,fromloc.city_name=charlotte;airline_name=us air,11
+which airline serves denver pittsburgh and atlanta,airline,fromloc.city_name=denver;fromloc.city_name=pittsburgh;fromloc.city_name=atlanta,5
+dallas to baltimore,flight,fromloc.city_name=dallas;toloc.city_name=baltimore,11
+i would like to fly to san francisco early in the day,flight,toloc.city_name=san francisco;depart_time.period_mod=early,11
+find the cheapest flight from denver to atlanta with a stopover in pittsburgh,flight,cost_relative=cheapest;fromloc.city_name=denver;toloc.city_name=atlanta;stoploc.city_name=pittsburgh,11
+which airlines are represented in the database,airline,,5
+what flights go from san francisco to dallas,flight,fromloc.city_name=san francisco;toloc.city_name=dallas,11
+what are the flights from cleveland to indianapolis on wednesday may twelfth on either twa delta or continental,flight,fromloc.city_name=cleveland;toloc.city_name=indianapolis;depart_date.day_name=wednesday;depart_date.month_name=may;depart_date.day_number=twelfth;airline_code=twa;airline_name=delta;or=or;airline_name=continental,11
+what flights do you have leaving denver and arriving in san francisco,flight,fromloc.city_name=denver;toloc.city_name=san francisco,11
+what is the cheapest flight from denver to oakland,flight,cost_relative=cheapest;fromloc.city_name=denver;toloc.city_name=oakland,11
+find a nonstop flight between denver and oakland leaving in the afternoon and arriving near 5 pm,flight,flight_stop=nonstop;fromloc.city_name=denver;toloc.city_name=oakland;arrive_time.period_of_day=afternoon;arrive_time.time_relative=near;arrive_time.time=5 pm,11
+i would like to fly to denver for under 500 dollars please show me the airfares between pittsburgh and denver,flight,toloc.city_name=denver;cost_relative=under;fare_amount=500 dollars;fromloc.city_name=pittsburgh;toloc.city_name=denver,11
+give me the flights from pittsburgh to los angeles thursday evening,flight,fromloc.city_name=pittsburgh;toloc.city_name=los angeles;depart_date.day_name=thursday;depart_time.period_of_day=evening,11
+how many flights does each airline have with booking class k,quantity,fare_basis_code=k,20
+how many airlines have flights with service class yn,quantity,fare_basis_code=yn,20
+please give me the prices for all flights from philadelphia to denver airport next sunday,airfare,fromloc.city_name=philadelphia;toloc.airport_name=denver airport;depart_date.date_relative=next;depart_date.day_name=sunday,3
+is there limo service at pittsburgh airport,ground_service,transport_type=limo;airport_name=pittsburgh airport,17
+i want to fly from atlanta to philadelphia,flight,fromloc.city_name=atlanta;toloc.city_name=philadelphia,11
+i want to arrive in detroit around 6 pm and i 'm leaving from chicago,flight,toloc.city_name=detroit;arrive_time.time_relative=around;arrive_time.time=6 pm;fromloc.city_name=chicago,11
+are there any flights from denver to pittsburgh connecting in atlanta,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;connect=connecting;stoploc.city_name=atlanta,11
+nonstop flights denver to boston,flight,flight_stop=nonstop;toloc.city_name=denver;toloc.city_name=boston,11
+show me one way flights from milwaukee to orlando wednesday,flight,round_trip=one way;fromloc.city_name=milwaukee;toloc.city_name=orlando;depart_date.day_name=wednesday,11
+show me flights from san francisco to dallas please,flight,fromloc.city_name=san francisco;toloc.city_name=dallas,11
+what flights from any city land at general mitchell international,flight,toloc.airport_name=general mitchell international,11
+i live in denver and i 'd like to make a trip to pittsburgh,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+what 's restriction ap68,restriction,restriction_code=ap68,21
+show me the flights from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+what flights leave from atlanta to boston on june twenty ninth in the afternoon,flight,fromloc.city_name=atlanta;toloc.city_name=boston;depart_date.month_name=june;depart_date.day_number=twenty ninth;depart_time.period_of_day=afternoon,11
+i 'd like to fly from boston to oakland through denver,flight,fromloc.city_name=boston;toloc.city_name=oakland;stoploc.city_name=denver,11
+i 'm interested in a flight from pittsburgh to atlanta,flight,fromloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+what is the last flight from washington to boston,flight,flight_mod=last;fromloc.city_name=washington;toloc.city_name=boston,11
+i would like a flight from baltimore to san francisco on twa with a stop in denver,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco;airline_code=twa;stoploc.city_name=denver,11
+what flights do you have from boston to pittsburgh on wednesday of next week after 6 pm,flight,fromloc.city_name=boston;toloc.city_name=pittsburgh;depart_date.day_name=wednesday;depart_date.date_relative=next;depart_time.time_relative=after;depart_time.time=6 pm,11
+does american airlines fly from atlanta to philadelphia,flight,airline_name=american airlines;fromloc.city_name=atlanta;toloc.city_name=philadelphia,11
+from washington to atlanta,flight,fromloc.city_name=washington;toloc.city_name=atlanta,11
+what nonstop flights are available from oakland to pittsburgh,flight,flight_stop=nonstop;fromloc.city_name=oakland;toloc.city_name=pittsburgh,11
+show me the flights from denver to philadelphia and the flights from pittsburgh to philadelphia,flight,fromloc.city_name=denver;toloc.city_name=philadelphia;fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+list nonstop flights from san francisco to oakland that depart in the afternoon,flight,flight_stop=nonstop;fromloc.city_name=san francisco;toloc.city_name=oakland;arrive_time.period_of_day=afternoon,11
+what is the cheapest fare that i can get between philadelphia and san francisco,airfare,cost_relative=cheapest;fromloc.city_name=philadelphia;toloc.city_name=san francisco,3
+i would like information on flights leaving atlanta in the afternoon arriving in dallas,flight,fromloc.city_name=atlanta;depart_time.period_of_day=afternoon;toloc.city_name=dallas,11
+what city is mco,city,airport_code=mco,9
+where is lester pearson airport,city,airport_name=lester pearson airport,9
+what is the earliest arrival in salt lake city of a flight from toronto,flight,flight_mod=earliest;toloc.city_name=salt lake city;fromloc.city_name=toronto,11
+do you have a flight from atlanta to boston that will stop in washington,flight,fromloc.city_name=atlanta;toloc.city_name=boston;stoploc.city_name=washington,11
+also show me flights from san francisco to pittsburgh on tuesday,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=tuesday,11
+i 'd like a flight tomorrow from san diego to toronto,flight,depart_date.today_relative=tomorrow;fromloc.city_name=san diego;toloc.city_name=toronto,11
+hi i 'd like to fly from columbus to phoenix and make a stop in cincinnati along the way,flight,fromloc.city_name=columbus;toloc.city_name=phoenix;stoploc.city_name=cincinnati,11
+show all nonstop flights from boston to atlanta,flight,flight_stop=nonstop;fromloc.city_name=boston;toloc.city_name=atlanta,11
+what kind of airplane goes from boston to san francisco before noon,aircraft,fromloc.city_name=boston;toloc.city_name=san francisco;depart_time.time_relative=before;depart_time.time=noon,1
+how much does it cost to fly on delta from dallas to baltimore,airfare,airline_name=delta;fromloc.city_name=dallas;toloc.city_name=baltimore,3
+what type of aircraft flies from pittsburgh to baltimore,aircraft,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,1
+what flights are available from atlanta to washington dc on wednesday,flight,fromloc.city_name=atlanta;toloc.city_name=washington;toloc.state_code=dc;depart_date.day_name=wednesday,11
+i want to fly from detroit to st. petersburg on northwest airlines and leave around 9 am tell me what aircraft are used by this flight and tell me the flight number,aircraft+flight+flight_no,fromloc.city_name=detroit;toloc.city_name=st. petersburg;airline_name=northwest airlines;depart_time.time_relative=around;depart_time.time=9 am,2
+list the flights from toronto to salt lake city,flight,fromloc.city_name=toronto;toloc.city_name=salt lake city,11
+newark to cleveland,flight,fromloc.city_name=newark;toloc.city_name=cleveland,11
+on a breakfast flight from philadelphia to dallas via atlanta,flight,meal_description=breakfast;fromloc.city_name=philadelphia;toloc.city_name=dallas;stoploc.city_name=atlanta,11
+please show me airlines with flights from denver to philadelphia,airline,fromloc.city_name=denver;toloc.city_name=philadelphia,5
+i would like the flight number and the time for the cheapest fare that is the least expensive first class fare from san francisco to pittsburgh leaving after 8 pm monday night,flight_no,flight_time=time;cost_relative=cheapest;cost_relative=least expensive;class_type=first class;fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_time.time_relative=after;depart_time.time=8 pm;depart_date.day_name=monday;depart_time.period_of_day=night,14
+philadelphia to dallas saturday,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.day_name=saturday,11
+what are the classes of service on lufthansa,flight,airline_name=lufthansa,11
+what flights are available from atlanta to oakland with one way economy fares,flight,fromloc.city_name=atlanta;toloc.city_name=oakland;round_trip=one way;economy=economy,11
+am flights from atlanta to philadelphia,flight,depart_time.period_of_day=am;fromloc.city_name=atlanta;toloc.city_name=philadelphia,11
+what is the meaning of restriction ap80,abbreviation,restriction_code=ap80,0
+show me all the flights arriving around noon in washington dc from denver,flight,arrive_time.time_relative=around;arrive_time.time=noon;toloc.city_name=washington;toloc.state_code=dc;fromloc.city_name=denver,11
+what flights are there from dallas to pittsburgh on monday morning,flight,fromloc.city_name=dallas;toloc.city_name=pittsburgh;depart_date.day_name=monday;depart_time.period_of_day=morning,11
+i need a cheap flight from baltimore to san francisco,flight,flight_mod=cheap;fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+from baltimore to san francisco,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+what flights are available saturday to san francisco from dallas,flight,depart_date.day_name=saturday;toloc.city_name=san francisco;fromloc.city_name=dallas,11
+what is the cost of united airlines flight 415 from chicago to kansas city thursday night,airfare,airline_name=united airlines;flight_number=415;fromloc.city_name=chicago;toloc.city_name=kansas city;depart_date.day_name=thursday;depart_time.period_of_day=night,3
+flights from pittsburgh to baltimore between 10 am and 2 pm,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore;depart_time.start_time=10 am;depart_time.end_time=2 pm,11
+list all flights on continental from denver to chicago on sunday which depart after 934 pm,flight,airline_name=continental;fromloc.city_name=denver;toloc.city_name=chicago;depart_date.day_name=sunday;depart_time.time_relative=after;depart_time.time=934 pm,11
+is there an atlanta flight to denver connecting,flight,fromloc.city_name=atlanta;toloc.city_name=denver;connect=connecting,11
+please give me flight schedules from pittsburgh to philadelphia,flight,flight_time=flight schedules;fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+show me all flights arriving to denver from boston,flight,toloc.city_name=denver;fromloc.city_name=boston,11
+show me the type of aircraft that cp uses,aircraft,airline_code=cp,1
+list daily flights from oakland to boston using united airlines,flight,flight_days=daily;fromloc.city_name=oakland;toloc.city_name=boston;airline_name=united airlines,11
+what nonstop flights between boston and washington arrive after 4 o'clock pm,flight,flight_stop=nonstop;fromloc.city_name=boston;toloc.city_name=washington;arrive_time.time_relative=after;arrive_time.time=4 o'clock pm,11
+what are the most expensive first class tickets between boston and san francisco,airfare,cost_relative=most expensive;class_type=first class;fromloc.city_name=boston;toloc.city_name=san francisco,3
+what is the first flight from boston to dallas,flight,flight_mod=first;fromloc.city_name=boston;toloc.city_name=dallas,11
+what is the price of a first class ticket from milwaukee to san francisco round trip,airfare,class_type=first class;fromloc.city_name=milwaukee;toloc.city_name=san francisco;round_trip=round trip,3
+show me the evening flights from baltimore to atlanta,flight,depart_time.period_of_day=evening;fromloc.city_name=baltimore;toloc.city_name=atlanta,11
+tell me about flights from toronto to salt lake city leaving toronto between 530 and 7 pm,flight,fromloc.city_name=toronto;toloc.city_name=salt lake city;fromloc.city_name=toronto;depart_time.start_time=530;depart_time.end_time=7 pm,11
+please show me the philadelphia to denver saturday flights again,flight,fromloc.city_name=philadelphia;toloc.city_name=denver;depart_date.day_name=saturday,11
+show me all the flights on delta airlines and twa that go to atlanta in the morning,flight,airline_name=delta airlines;airline_code=twa;toloc.city_name=atlanta;depart_time.period_of_day=morning,11
+what is the earliest flight leaving washington to san francisco,flight,flight_mod=earliest;fromloc.city_name=washington;toloc.city_name=san francisco,11
+i live in montreal and i want to travel to chicago then indianapolis and then return home,flight,fromloc.city_name=montreal;toloc.city_name=chicago;toloc.city_name=indianapolis,11
+what airlines fly from dallas to baltimore,airline,fromloc.city_name=dallas;toloc.city_name=baltimore,5
+do you have an early morning direct flight from philadelphia to pittsburgh,flight,depart_time.period_of_day=early;depart_time.period_of_day=morning;connect=direct;fromloc.city_name=philadelphia;toloc.city_name=pittsburgh,11
+what is the last flight from boston to atlanta,flight,flight_mod=last;fromloc.city_name=boston;toloc.city_name=atlanta,11
+what are the fares between new york and la on monday morning,airfare,fromloc.city_name=new york;toloc.city_name=la;depart_date.day_name=monday;depart_time.period_of_day=morning,3
+newark to minneapolis on sunday,flight,fromloc.city_name=newark;toloc.city_name=minneapolis;depart_date.day_name=sunday,11
+what are the lowest one way fares from atlanta to denver,airfare,cost_relative=lowest;round_trip=one way;fromloc.city_name=atlanta;toloc.city_name=denver,3
+i need a united airlines flight from denver to baltimore on saturday,flight,airline_name=united airlines;fromloc.city_name=denver;toloc.city_name=baltimore;depart_date.day_name=saturday,11
+find the cheapest one way fare from boston to oakland,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=boston;toloc.city_name=oakland,3
+what is ewr,abbreviation,airport_code=ewr,0
+show flights from san francisco to denver on a thursday,flight,fromloc.city_name=san francisco;toloc.city_name=denver;depart_date.day_name=thursday,11
+what does fare code y mean,abbreviation,fare_basis_code=y,0
+flights from denver to westchester county new york weekdays,flight,fromloc.city_name=denver;toloc.city_name=westchester county;toloc.city_name=new york;flight_mod=weekdays,11
+is breakfast served on flight ua 343 from boston to denver coach class,flight,meal_description=breakfast;airline_code=ua;flight_number=343;fromloc.city_name=boston;toloc.city_name=denver;class_type=coach class,11
+daily flights from newark to cleveland departing 5 o'clock pm,flight,flight_days=daily;fromloc.city_name=newark;toloc.city_name=cleveland;depart_time.time=5 o'clock pm,11
+i would like to fly from atlanta to philadelphia,flight,fromloc.city_name=atlanta;toloc.city_name=philadelphia,11
+i 'd like to book the cheapest one way flight from pittsburgh to atlanta on july twentieth,flight,cost_relative=cheapest;round_trip=one way;fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_date.month_name=july;depart_date.day_number=twentieth,11
+show me flights from pittsburgh to san francisco on sunday,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.day_name=sunday,11
+i want to go from baltimore to san francisco with a stopover in denver,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco;stoploc.city_name=denver,11
+flight from dallas to boston tomorrow,flight,fromloc.city_name=dallas;toloc.city_name=boston;depart_date.today_relative=tomorrow,11
+does delta have an early afternoon flight from boston to san francisco,flight,airline_name=delta;depart_time.period_of_day=early;depart_time.period_of_day=afternoon;fromloc.city_name=boston;toloc.city_name=san francisco,11
+show me the lowest fare for a round trip flight from baltimore to dallas,airfare,cost_relative=lowest;round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=dallas,3
+a breakfast flight from denver to san francisco please,flight,meal_description=breakfast;fromloc.city_name=denver;toloc.city_name=san francisco,11
+are there any flights from boston to san francisco which stop in denver,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=denver,11
+chicago to san francisco on continental,flight,fromloc.city_name=chicago;toloc.city_name=san francisco;airline_name=continental,11
+what airlines fly from new york to milwaukee to los angeles,airline,fromloc.city_name=new york;stoploc.city_name=milwaukee;toloc.city_name=los angeles,5
+flights from atlanta to dallas in the afternoon,flight,fromloc.city_name=atlanta;toloc.city_name=dallas;depart_time.period_of_day=afternoon,11
+can you list all the airlines that have flights from boston to san francisco,airline,fromloc.city_name=boston;toloc.city_name=san francisco,5
+are there delta flights leaving atlanta,flight,airline_name=delta;fromloc.city_name=atlanta,11
+what flights from las vegas to san diego,flight,fromloc.city_name=las vegas;toloc.city_name=san diego,11
+show flights first class on american from philadelphia to dallas fort worth,flight,class_type=first class;airline_name=american;fromloc.city_name=philadelphia;toloc.city_name=dallas fort worth,11
+show me all flights from san francisco to pittsburgh on a monday,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=monday,11
+show me flights from denver to boston on thursday,flight,fromloc.city_name=denver;toloc.city_name=boston;depart_date.day_name=thursday,11
+show all airlines flying from pittsburgh to san francisco,airline,fromloc.city_name=pittsburgh;toloc.city_name=san francisco,5
+i want to travel from washington dc to philadelphia on tuesday morning,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=philadelphia;depart_date.day_name=tuesday;depart_time.period_of_day=morning,11
+what is the earliest flight between boston and washington,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=washington,11
+what are the flights from orlando to kansas city,flight,fromloc.city_name=orlando;toloc.city_name=kansas city,11
+i need information for flights leaving baltimore and arriving in atlanta,flight,fromloc.city_name=baltimore;toloc.city_name=atlanta,11
+what flights are there tomorrow from tacoma to san jose,flight,depart_date.today_relative=tomorrow;fromloc.city_name=tacoma;toloc.city_name=san jose,11
+show me the latest nonstop flight from denver to washington dc,flight,flight_mod=latest;flight_stop=nonstop;fromloc.city_name=denver;toloc.city_name=washington;toloc.state_code=dc,11
+i want a direct flight from oakland to boston that leaves on a wednesday,flight,connect=direct;fromloc.city_name=oakland;toloc.city_name=boston;depart_date.day_name=wednesday,11
+what fare codes cover flights from philadelphia to san francisco,abbreviation,fromloc.city_name=philadelphia;toloc.city_name=san francisco,0
+what is fare code h,abbreviation,fare_basis_code=h,0
+show me the flights from oakland to denver,flight,fromloc.city_name=oakland;toloc.city_name=denver,11
+what is the cheapest round trip fare from atlanta to pittsburgh,airfare,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=atlanta;toloc.city_name=pittsburgh,3
+round trip fares from denver to philadelphia less than 1000 dollars,airfare,round_trip=round trip;fromloc.city_name=denver;toloc.city_name=philadelphia;cost_relative=less;fare_amount=1000 dollars,3
+flight on monday from philadelphia to oakland california early morning,flight,depart_date.day_name=monday;fromloc.city_name=philadelphia;toloc.city_name=oakland;toloc.state_name=california;depart_time.period_of_day=early;depart_time.period_of_day=morning,11
+tell me about flights from salt lake city to st. petersburg,flight,fromloc.city_name=salt lake city;toloc.city_name=st. petersburg,11
+i want to fly from baltimore to philadelphia,flight,fromloc.city_name=baltimore;toloc.city_name=philadelphia,11
+i would like a flight from pittsburgh to san francisco on august twentieth,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.month_name=august;depart_date.day_number=twentieth,11
+does delta airlines fly from boston to washington dc,flight,airline_name=delta airlines;fromloc.city_name=boston;toloc.city_name=washington;toloc.state_code=dc,11
+what is the earliest flight from boston to san francisco on american airlines,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=san francisco;airline_name=american airlines,11
+i would like to fly from pittsburgh to atlanta on us air,flight,fromloc.city_name=pittsburgh;toloc.city_name=atlanta;airline_name=us air,11
+do i get a meal on the atlanta to bwi flight eastern 210,meal,meal=meal;fromloc.city_name=atlanta;toloc.airport_code=bwi;airline_name=eastern;flight_number=210,19
+what is bna,abbreviation,airport_code=bna,0
+i 'm interested in flights from denver to pittsburgh,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+what are the least expensive flights from denver to atlanta,flight,cost_relative=least expensive;fromloc.city_name=denver;toloc.city_name=atlanta,11
+show me flights from baltimore to dallas,flight,fromloc.city_name=baltimore;toloc.city_name=dallas,11
+information on flights from pittsburgh to philadelphia,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+i 'd like to book an flight on american airlines from boston to san francisco with one stop in pittsburgh,flight,airline_name=american airlines;fromloc.city_name=boston;toloc.city_name=san francisco;flight_stop=one stop;stoploc.city_name=pittsburgh,11
+give me the flights from phoenix to milwaukee on wednesday,flight,fromloc.city_name=phoenix;toloc.city_name=milwaukee;depart_date.day_name=wednesday,11
+i 'd like flights on american from philadelphia to dallas arriving before 1145 am,flight,airline_name=american;fromloc.city_name=philadelphia;toloc.city_name=dallas;arrive_time.time_relative=before;arrive_time.time=1145 am,11
+what ground transportation is available from the pittsburgh airport,ground_service,fromloc.airport_name=pittsburgh airport,17
+list all united flights from philadelphia to san francisco,flight,airline_name=united;fromloc.city_name=philadelphia;toloc.city_name=san francisco,11
+could you please tell me the airlines that fly from toronto to san diego,airline,fromloc.city_name=toronto;toloc.city_name=san diego,5
+lowest fare from san francisco to los angeles,airfare,cost_relative=lowest;fromloc.city_name=san francisco;toloc.city_name=los angeles,3
+i would like to fly from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+show me the flights from denver to pittsburgh and atlanta,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+give me a list of flights between denver and oakland,flight,fromloc.city_name=denver;toloc.city_name=oakland,11
+show me all flights from san francisco to boston philadelphia or baltimore,flight,fromloc.city_name=san francisco;toloc.city_name=boston;toloc.city_name=philadelphia;toloc.city_name=baltimore,11
+how many passengers can a boeing 737 hold,capacity,aircraft_code=737,8
+flights from ontario to orlando,flight,fromloc.city_name=ontario;toloc.city_name=orlando,11
+show me the flights from indianapolis to montreal,flight,fromloc.city_name=indianapolis;toloc.city_name=montreal,11
+show me the flights on tuesday morning from charlotte to baltimore,flight,depart_date.day_name=tuesday;depart_time.period_of_day=morning;fromloc.city_name=charlotte;toloc.city_name=baltimore,11
+what 's the smallest plane flying from pittsburgh to baltimore on december seventeenth,aircraft,mod=smallest;fromloc.city_name=pittsburgh;toloc.city_name=baltimore;depart_date.month_name=december;depart_date.day_number=seventeenth,1
+may i have a list of flights going from boston to denver on the twenty ninth of july,flight,fromloc.city_name=boston;toloc.city_name=denver;depart_date.day_number=twenty ninth;depart_date.month_name=july,11
+please list all airline flights between denver and boston,airline,fromloc.city_name=denver;toloc.city_name=boston,5
+please show me any united flights including connections between boston and san francisco at 5 in the evening,flight,airline_name=united;connect=connections;fromloc.city_name=boston;toloc.city_name=san francisco;depart_time.time=5;depart_time.period_of_day=evening,11
+show me all the flights from denver and all the flights from miami that arrive at baltimore around noon,flight,fromloc.city_name=denver;fromloc.city_name=miami;toloc.city_name=baltimore;arrive_time.time_relative=around;arrive_time.time=noon,11
+what flights leave after 7 pm from pittsburgh to philadelphia,flight,depart_time.time_relative=after;depart_time.time=7 pm;fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+ground transportation san francisco,ground_service,city_name=san francisco,17
+find me the earliest flight from boston to atlanta on any day of the week,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=atlanta,11
+i would like to know the latest flight on wednesday you have leaving from oakland to salt lake city which offers a meal,flight,flight_mod=latest;depart_date.day_name=wednesday;fromloc.city_name=oakland;toloc.city_name=salt lake city;meal=meal,11
+do you have a 9 o'clock flight from boston to philadelphia,flight,depart_time.time=9 o'clock;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+what are the air restrictions on flights from pittsburgh to atlanta for the airfare of 416 dollars,restriction,fromloc.city_name=pittsburgh;toloc.city_name=atlanta;fare_amount=416 dollars,21
+on august thirtieth i would like a flight from denver to san francisco in the early am,flight,depart_date.month_name=august;depart_date.day_number=thirtieth;fromloc.city_name=denver;toloc.city_name=san francisco;depart_time.period_mod=early;depart_time.period_of_day=am,11
+show me ground transportation in westchester county,ground_service,city_name=westchester county,17
+show me all the flights out of boston today,flight,fromloc.city_name=boston;depart_date.today_relative=today,11
+how much will it cost taking coach from orlando to indianapolis on december twenty ninth flying us air 311,airfare,class_type=coach;fromloc.city_name=orlando;toloc.city_name=indianapolis;depart_date.month_name=december;depart_date.day_number=twenty ninth;airline_name=us air;flight_number=311,3
+show me which flights from san francisco to pittsburgh on a monday are first class,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=monday;class_type=first class,11
+show me all flights from san francisco to la guardia nonstop,flight,fromloc.city_name=san francisco;toloc.airport_name=la guardia;flight_stop=nonstop,11
+list all flights from atlanta to dallas on friday,flight,fromloc.city_name=atlanta;toloc.city_name=dallas;depart_date.day_name=friday,11
+may i have a listing of flights from milwaukee to tacoma washington departing in the evening,flight,fromloc.city_name=milwaukee;toloc.city_name=tacoma;toloc.state_name=washington;depart_time.period_of_day=evening,11
+what is the least expensive one way ticket from atlanta to denver leaving on october twelfth,airfare,cost_relative=least expensive;round_trip=one way;fromloc.city_name=atlanta;toloc.city_name=denver;depart_date.month_name=october;depart_date.day_number=twelfth,3
+i need information flight information for tuesday on a flight leaving baltimore bound for dallas,flight,depart_date.day_name=tuesday;fromloc.city_name=baltimore;toloc.city_name=dallas,11
+flights from newark to cleveland daily 5 o'clock pm,flight,fromloc.city_name=newark;toloc.city_name=cleveland;flight_days=daily;depart_time.time=5 o'clock pm,11
+what flights go from pittsburgh to newark after 823 in the morning,flight,fromloc.city_name=pittsburgh;toloc.city_name=newark;depart_time.time_relative=after;depart_time.time=823;depart_time.period_of_day=morning,11
+what flights are available from philadelphia to denver on sundays,flight,fromloc.city_name=philadelphia;toloc.city_name=denver;depart_date.day_name=sundays,11
+all flights to baltimore after 12 pm,flight,toloc.city_name=baltimore;depart_time.time_relative=after;depart_time.time=12 pm,11
+i would like a flight from philadelphia to dallas that makes a stop in atlanta,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;stoploc.city_name=atlanta,11
+what is your last trip on august twenty seventh from washington to boston,flight,flight_mod=last;depart_date.month_name=august;depart_date.day_number=twenty seventh;fromloc.city_name=washington;toloc.city_name=boston,11
+show me all flights from pittsburgh to dallas,flight,fromloc.city_name=pittsburgh;toloc.city_name=dallas,11
+what flights are there on saturdays from philadelphia to denver,flight,depart_date.day_name=saturdays;fromloc.city_name=philadelphia;toloc.city_name=denver,11
+i would like the cheapest one way fare from dallas to denver,airfare,cost_relative=cheapest;round_trip=one way;fromloc.city_name=dallas;toloc.city_name=denver,3
+round trip fares from baltimore to philadelphia under 1000 dollars,airfare,round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=philadelphia;cost_relative=under;fare_amount=1000 dollars,3
+philadelphia to san francisco with one stop in dallas please,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;flight_stop=one stop;stoploc.city_name=dallas,11
+show me the flights from miami to san diego with one stop in denver,flight,fromloc.city_name=miami;toloc.city_name=san diego;flight_stop=one stop;stoploc.city_name=denver,11
+show me the fare for delta flight 296 from atlanta to philadelphia,airfare,airline_name=delta;flight_number=296;fromloc.city_name=atlanta;toloc.city_name=philadelphia,3
+give me the flights from new york to las vegas and memphis to las vegas on sunday,flight,fromloc.city_name=new york;toloc.city_name=las vegas;fromloc.city_name=memphis;toloc.city_name=las vegas;depart_date.day_name=sunday,11
+i would like to fly from boston to baltimore what time are the flights in the afternoon,flight,fromloc.city_name=boston;toloc.city_name=baltimore;flight_time=time;depart_time.period_of_day=afternoon,11
+show first flight from boston to philadelphia,flight,flight_mod=first;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+can you show me fares for december sixteenth from oakland to dallas one way only,airfare,depart_date.month_name=december;depart_date.day_number=sixteenth;fromloc.city_name=oakland;toloc.city_name=dallas;round_trip=one way,3
+show flights from denver into san francisco,flight,fromloc.city_name=denver;toloc.city_name=san francisco,11
+thank you i also need to travel next wednesday evening from dallas to san francisco,flight,depart_date.date_relative=next;depart_date.day_name=wednesday;depart_time.period_of_day=evening;fromloc.city_name=dallas;toloc.city_name=san francisco,11
+flight from nashville to cleveland,flight,fromloc.city_name=nashville;toloc.city_name=cleveland,11
+i would like to find the least expensive flight from boston to denver,flight,cost_relative=least expensive;fromloc.city_name=boston;toloc.city_name=denver,11
+show me all flights from montreal,flight,fromloc.city_name=montreal,11
+what is the cheapest fare from washington to san francisco,airfare,cost_relative=cheapest;fromloc.city_name=washington;toloc.city_name=san francisco,3
+i need information on flights leaving philadelphia on friday arriving in oakland california,flight,fromloc.city_name=philadelphia;depart_date.day_name=friday;toloc.city_name=oakland;toloc.state_name=california,11
+i 'd like a flight tomorrow late from nashville to houston with dinner please,flight,depart_date.today_relative=tomorrow;depart_time.period_mod=late;fromloc.city_name=nashville;toloc.city_name=houston;meal_description=dinner,11
+i 'd like to go from boston to atlanta sometime after 5 pm can you tell me the flights that could do that for me,flight,fromloc.city_name=boston;toloc.city_name=atlanta;depart_time.time_relative=after;depart_time.time=5 pm,11
+i 'm interested in flying from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+what is the ground transportation available in denver,ground_service,city_name=denver,17
+list all the flights that arrive at general mitchell international from various cities,flight,toloc.airport_name=general mitchell international,11
+what is the earliest flight from washington to san francisco on friday that serves breakfast,flight,flight_mod=earliest;fromloc.city_name=washington;toloc.city_name=san francisco;depart_date.day_name=friday;meal_description=breakfast,11
+what are my choices of flights to get from charlotte to minneapolis arriving about 7 pm in minneapolis,flight,fromloc.city_name=charlotte;toloc.city_name=minneapolis;arrive_time.time_relative=about;arrive_time.time=7 pm;toloc.city_name=minneapolis,11
+what time are the flights leaving from denver to pittsburgh on july seventh,flight_time,flight_time=time;fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_date.month_name=july;depart_date.day_number=seventh,15
+show me flights from baltimore to dallas,flight,fromloc.city_name=baltimore;toloc.city_name=dallas,11
+what flights from atlanta to toronto,flight,fromloc.city_name=atlanta;toloc.city_name=toronto,11
+what does fare code q mean,abbreviation,fare_basis_code=q,0
+last nonstop flight from los angeles to pittsburgh on monday night,flight,flight_mod=last;flight_stop=nonstop;fromloc.city_name=los angeles;toloc.city_name=pittsburgh;arrive_date.day_name=monday;arrive_time.period_of_day=night,11
+what is the fare going from baltimore to boston one way on november seventh,airfare,fromloc.city_name=baltimore;toloc.city_name=boston;round_trip=one way;depart_date.month_name=november;depart_date.day_number=seventh,3
+show me all the flights that arrive in baltimore from anywhere between 1850 and midnight,flight,toloc.city_name=baltimore;arrive_time.start_time=1850;arrive_time.period_of_day=midnight,11
+san francisco to denver,flight,fromloc.city_name=san francisco;toloc.city_name=denver,11
+i want a flight from denver to pittsburgh then from pittsburgh to atlanta then from atlanta back to pittsburgh back to denver,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;fromloc.city_name=pittsburgh;toloc.city_name=atlanta;fromloc.city_name=atlanta;toloc.city_name=pittsburgh;toloc.city_name=denver,11
+list all flights leaving on thursday morning from new york city to montreal,flight,depart_date.day_name=thursday;depart_time.period_of_day=morning;fromloc.city_name=new york city;toloc.city_name=montreal,11
+show me the united flights which go from boston to washington dc,flight,airline_name=united;fromloc.city_name=boston;toloc.city_name=washington;toloc.state_code=dc,11
+give me the least expensive first class round trip ticket on us air from cleveland to miami,airfare,cost_relative=least expensive;class_type=first class;round_trip=round trip;airline_name=us air;fromloc.city_name=cleveland;toloc.city_name=miami,3
+show me the flights from all airports to love field,flight,toloc.airport_name=love field,11
+i 'm trying to find a flight from columbus to phoenix through cincinnati,flight,fromloc.city_name=columbus;toloc.city_name=phoenix;stoploc.city_name=cincinnati,11
+which united airlines flight flies from boston to san francisco and makes a stopover in philadelphia,flight,airline_name=united airlines;fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=philadelphia,11
+could you tell me about flights from philadelphia to dallas the flights should leave philadelphia in the morning,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;fromloc.city_name=philadelphia;depart_time.period_of_day=morning,11
+i would like to fly from baltimore to san francisco on eastern airlines,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco;airline_name=eastern airlines,11
+what are the cheapest one way flights from pittsburgh to atlanta,flight,cost_relative=cheapest;round_trip=one way;fromloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+show fares and flights from denver to oakland,airfare,fromloc.city_name=denver;toloc.city_name=oakland,3
+list the flights from houston to st. paul,flight,fromloc.city_name=houston;toloc.city_name=st. paul,11
+what flights depart newark for tampa on friday,flight,fromloc.city_name=newark;toloc.city_name=tampa;depart_date.day_name=friday,11
+show me all the available flights from baltimore to dallas with economy fares,flight,fromloc.city_name=baltimore;toloc.city_name=dallas;economy=economy,11
+do any of the san francisco to boston flights leave on friday,flight,fromloc.city_name=san francisco;toloc.city_name=boston;depart_date.day_name=friday,11
+please show me airlines with flights from boston to denver,airline,fromloc.city_name=boston;toloc.city_name=denver,5
+what is the lowest cost fare that delta has between boston and san francisco,airfare,cost_relative=lowest cost;airline_name=delta;fromloc.city_name=boston;toloc.city_name=san francisco,3
+dl 296 denver to philadelphia what is the fare,airfare,airline_code=dl;flight_number=296;fromloc.city_name=denver;toloc.city_name=philadelphia,3
+what is the lowest cost for a one way ticket from boston to washington,airfare,cost_relative=lowest cost;round_trip=one way;fromloc.city_name=boston;toloc.city_name=washington,3
+what flights from kansas city to denver,flight,fromloc.city_name=kansas city;toloc.city_name=denver,11
+does united airline have any flights from dallas to san francisco,flight,airline_name=united airline;fromloc.city_name=dallas;toloc.city_name=san francisco,11
+do all the flights to oakland land at the same place,flight,toloc.city_name=oakland,11
+please show me the cost of flight ua 201 from boston to denver and flight ua 343 from boston to denver,airfare,airline_code=ua;flight_number=201;fromloc.city_name=boston;toloc.city_name=denver;airline_code=ua;flight_number=343;fromloc.city_name=boston;toloc.city_name=denver,3
+i need flights that arrive in baltimore from pittsburgh,flight,toloc.city_name=baltimore;fromloc.city_name=pittsburgh,11
+show me all the flights from new york to milwaukee,flight,fromloc.city_name=new york;toloc.city_name=milwaukee,11
+what flights are there between atlanta and denver,flight,fromloc.city_name=atlanta;toloc.city_name=denver,11
+what flights are available from pittsburgh to oakland airport,flight,fromloc.city_name=pittsburgh;toloc.airport_name=oakland airport,11
+i 'm requesting flight information on a flight from san francisco to pittsburgh on friday,flight,fromloc.city_name=san francisco;toloc.city_name=pittsburgh;depart_date.day_name=friday,11
+show me morning flights from toronto,flight,depart_time.period_of_day=morning;fromloc.city_name=toronto,11
+what is the fare from san francisco to dallas fort worth on delta flight 852,airfare,fromloc.city_name=san francisco;toloc.city_name=dallas fort worth;airline_name=delta;flight_number=852,3
+what flights do you have today from san francisco to pittsburgh,flight,depart_date.today_relative=today;fromloc.city_name=san francisco;toloc.city_name=pittsburgh,11
+what are all flights from philadelphia to denver on wednesdays,flight,fromloc.city_name=philadelphia;toloc.city_name=denver;depart_date.day_name=wednesdays,11
+how many delta flights leave from washington,quantity,airline_name=delta;fromloc.city_name=washington,20
+i 'd like the flights from san jose to nashville on the morning of friday june third,flight,fromloc.city_name=san jose;toloc.city_name=nashville;depart_time.period_of_day=morning;depart_date.day_name=friday;depart_date.month_name=june;depart_date.day_number=third,11
+what flights go from philadelphia to dallas with a stopover in atlanta,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;stoploc.city_name=atlanta,11
+what is the departure time of the latest flight of united airlines from denver to boston,flight_time,flight_time=departure time;flight_mod=latest;airline_name=united airlines;fromloc.city_name=denver;toloc.city_name=boston,15
+all flights from denver to pittsburgh leaving after 6 pm and before 7 pm,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_time.time_relative=after;depart_time.time=6 pm;depart_time.time_relative=before;depart_time.time=7 pm,11
+show me all flights from pittsburgh to oakland that arrive after 10 am,flight,fromloc.city_name=pittsburgh;toloc.city_name=oakland;arrive_time.time_relative=after;arrive_time.time=10 am,11
+and what is the last flight from denver to boston for tomorrow evening,flight,flight_mod=last;fromloc.city_name=denver;toloc.city_name=boston;depart_date.today_relative=tomorrow;depart_time.period_of_day=evening,11
+how much is the 718 am flight from las vegas to new york twa,airfare,depart_time.time=718 am;fromloc.city_name=las vegas;toloc.city_name=new york;airline_code=twa,3
+show me all flights from philadelphia to dallas which arrive in dallas before 3 o'clock pm on saturday,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;toloc.city_name=dallas;arrive_time.time_relative=before;arrive_time.time=3 o'clock pm;arrive_date.day_name=saturday,11
+list all flights from boston to atlanta after 6 o'clock pm on wednesday,flight,fromloc.city_name=boston;toloc.city_name=atlanta;depart_time.time_relative=after;depart_time.time=6 o'clock pm;depart_date.day_name=wednesday,11
+what northwest airline flights leave denver before noon,flight,airline_name=northwest airline;fromloc.city_name=denver;depart_time.time_relative=before;depart_time.time=noon,11
+do you have an afternoon flight leaving in the afternoon going from boston to san francisco with a stopover in dallas,flight,depart_time.period_of_day=afternoon;depart_time.period_of_day=afternoon;fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+show me all flights from new york to miami on a tuesday with round trip fares under 932 dollars,flight,fromloc.city_name=new york;toloc.city_name=miami;depart_date.day_name=tuesday;round_trip=round trip;cost_relative=under;fare_amount=932 dollars,11
+what airlines fly from boston to pittsburgh,airline,fromloc.city_name=boston;toloc.city_name=pittsburgh,5
+please list the thursday morning flights from st. louis to st. paul,flight,depart_date.day_name=thursday;depart_time.period_of_day=morning;fromloc.city_name=st. louis;toloc.city_name=st. paul,11
+show me all flights from san diego to los angeles,flight,fromloc.city_name=san diego;toloc.city_name=los angeles,11
+can you list all nonstop flights departing from st. petersburg and arriving in charlotte,flight,flight_stop=nonstop;fromloc.city_name=st. petersburg;toloc.city_name=charlotte,11
+flights from phoenix to newark,flight,fromloc.city_name=phoenix;toloc.city_name=newark,11
+what is hp,abbreviation,airline_code=hp,0
+is there an american airlines flight in the evening from dallas to san francisco,flight,airline_name=american airlines;depart_time.period_of_day=evening;fromloc.city_name=dallas;toloc.city_name=san francisco,11
+show me all nonstop flights between denver and oakland leaving after noon and arriving after 5 pm,flight,flight_stop=nonstop;fromloc.city_name=denver;toloc.city_name=oakland;arrive_time.time_relative=after;arrive_time.time=noon;arrive_time.time_relative=after;arrive_time.time=5 pm,11
+i 'm looking for a flight from charlotte to las vegas that stops in st. louis hopefully a dinner flight how can i find that out,flight,fromloc.city_name=charlotte;toloc.city_name=las vegas;stoploc.city_name=st. louis;meal_description=dinner,11
+show me the flights,flight,,11
+give me flights that arrive in baltimore from atlanta,flight,toloc.city_name=baltimore;fromloc.city_name=atlanta,11
+show me flights from denver to philadelphia,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+thank you for that information now i would like to book a flight from philadelphia to boston on the night of april sixteen around 9 o'clock,flight,fromloc.city_name=philadelphia;toloc.city_name=boston;depart_time.period_of_day=night;depart_date.month_name=april;depart_date.day_number=sixteen;depart_time.time_relative=around;depart_time.time=9 o'clock,11
+show me the flights from baltimore to philadelphia,flight,fromloc.city_name=baltimore;toloc.city_name=philadelphia,11
+yes i need a flight from denver to pittsburgh on july seventh,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_date.month_name=july;depart_date.day_number=seventh,11
+show me all flights on southwest airlines from san diego to san francisco,flight,airline_name=southwest airlines;fromloc.city_name=san diego;toloc.city_name=san francisco,11
+what flights leave seattle on sunday on continental after 9 pm,flight,fromloc.city_name=seattle;depart_date.day_name=sunday;airline_name=continental;depart_time.time_relative=after;depart_time.time=9 pm,11
+what ground transportation is available at the boston airport,ground_service,airport_name=boston airport,17
+kindly give me the type of aircraft used to fly from atlanta to denver,aircraft,fromloc.city_name=atlanta;toloc.city_name=denver,1
+i need to take ten people from denver to phoenix please give me the flights during the week,flight,fromloc.city_name=denver;toloc.city_name=phoenix;flight_mod=during the week,11
+what are the flights from charlotte to atlanta returning on tuesday july thirteenth,flight,fromloc.city_name=charlotte;toloc.city_name=atlanta;depart_date.day_name=tuesday;depart_date.month_name=july;depart_date.day_number=thirteenth,11
+show me the flights from atlanta to bwi,flight,fromloc.city_name=atlanta;toloc.airport_code=bwi,11
+show me us air fares for next sunday from miami to cleveland,airfare,airline_name=us air;depart_date.date_relative=next;depart_date.day_name=sunday;fromloc.city_name=miami;toloc.city_name=cleveland,3
+list all flights from pittsburgh to philadelphia,flight,fromloc.city_name=pittsburgh;toloc.city_name=philadelphia,11
+information on ground transportation in denver,ground_service,city_name=denver,17
+show me all flights from philadelphia to atlanta that leave after 5 pm on wednesday,flight,fromloc.city_name=philadelphia;toloc.city_name=atlanta;depart_time.time_relative=after;depart_time.time=5 pm;depart_date.day_name=wednesday,11
+what airlines fly from boston to atlanta,airline,fromloc.city_name=boston;toloc.city_name=atlanta,5
+i would like to fly from pittsburgh to san francisco,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco,11
+please show me all round trip flights from burbank to tacoma,flight,round_trip=round trip;fromloc.city_name=burbank;toloc.city_name=tacoma,11
+flights from newark to cleveland,flight,fromloc.city_name=newark;toloc.city_name=cleveland,11
+what is the cheapest ticket from baltimore to san francisco on friday august thirtieth,airfare,cost_relative=cheapest;fromloc.city_name=baltimore;toloc.city_name=san francisco;depart_date.day_name=friday;depart_date.month_name=august;depart_date.day_number=thirtieth,3
+flights from montreal and phoenix to las vegas arriving at the same time,flight,fromloc.city_name=montreal;fromloc.city_name=phoenix;toloc.city_name=las vegas,11
+from san francisco to denver,flight,fromloc.city_name=san francisco;toloc.city_name=denver,11
+how many stops on continental 1765 from boston to san francisco,quantity,airline_name=continental;flight_number=1765;fromloc.city_name=boston;toloc.city_name=san francisco,20
+what is the ground transportation between airport and baltimore,ground_service,toloc.city_name=baltimore,17
+what flights depart baltimore and arrive by 8 pm friday in san francisco,flight,fromloc.city_name=baltimore;arrive_time.time_relative=by;arrive_time.time=8 pm;arrive_date.day_name=friday;toloc.city_name=san francisco,11
+first class round trip airfare from indianapolis to memphis,airfare,class_type=first class;round_trip=round trip;fromloc.city_name=indianapolis;toloc.city_name=memphis,3
+is there ground transportation from atlanta airport to downtown atlanta,ground_service,fromloc.airport_name=atlanta airport;toloc.city_name=atlanta,17
+from las vegas to phoenix,flight,fromloc.city_name=las vegas;toloc.city_name=phoenix,11
+what is the least expensive flight from atlanta to denver leaving on october twelfth,flight,cost_relative=least expensive;fromloc.city_name=atlanta;toloc.city_name=denver;depart_date.month_name=october;depart_date.day_number=twelfth,11
+show me flights from boston to washington on monday,flight,fromloc.city_name=boston;toloc.city_name=washington;depart_date.day_name=monday,11
+i would like to fly to baltimore,flight,toloc.city_name=baltimore,11
+please list the tuesday flights from atlanta to st. louis,flight,depart_date.day_name=tuesday;fromloc.city_name=atlanta;toloc.city_name=st. louis,11
+i 'd like to fly from boston to san francisco,flight,fromloc.city_name=boston;toloc.city_name=san francisco,11
+what is the latest flight leaving las vegas for ontario,flight,flight_mod=latest;fromloc.city_name=las vegas;toloc.city_name=ontario,11
+i need a nonstop flight from san diego to phoenix,flight,flight_stop=nonstop;fromloc.city_name=san diego;toloc.city_name=phoenix,11
+what types of ground transportation are available in denver,ground_service,city_name=denver,17
+i would like a flight from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+list daily flights from oakland to boston using twa,flight,flight_days=daily;fromloc.city_name=oakland;toloc.city_name=boston;airline_code=twa,11
+list daily flights from oakland to boston using delta airlines,flight,flight_days=daily;fromloc.city_name=oakland;toloc.city_name=boston;airline_name=delta airlines,11
+what flights has continental from atlanta,flight,airline_name=continental;fromloc.city_name=atlanta,11
+what ground transportation is available in baltimore,ground_service,city_name=baltimore,17
+i would like an afternoon flight from washington to boston on august twentieth,flight,depart_time.period_of_day=afternoon;fromloc.city_name=washington;toloc.city_name=boston;depart_date.month_name=august;depart_date.day_number=twentieth,11
+what flights leave pittsburgh and arrive in los angeles after 5 pm on thursday,flight,fromloc.city_name=pittsburgh;toloc.city_name=los angeles;arrive_time.time_relative=after;arrive_time.time=5 pm;arrive_date.day_name=thursday,11
+when does continental fly from philadelphia to denver on sundays,flight_time,flight_time=when;airline_name=continental;fromloc.city_name=philadelphia;toloc.city_name=denver;depart_date.day_name=sundays,15
+show me the flights from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+are there any turboprop flights from pittsburgh to baltimore on december seventeenth,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore;depart_date.month_name=december;depart_date.day_number=seventeenth,11
+how many cities are served by lufthansa with first class flights,quantity,airline_name=lufthansa;class_type=first class,20
+show me the flights from boston to san francisco stopping in dallas on american airlines,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=dallas;airline_name=american airlines,11
+i would like some information on flights leaving boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+i want to travel from kansas city to st. paul and be there by dinnertime,flight,fromloc.city_name=kansas city;toloc.city_name=st. paul;depart_time.time_relative=by;depart_time.period_of_day=dinnertime,11
+what ground transportation is available in san francisco,ground_service,city_name=san francisco,17
+do any us air flights leave from san francisco,flight,airline_name=us air;fromloc.city_name=san francisco,11
+i need a return flight from philadelphia to boston,flight,fromloc.city_name=philadelphia;toloc.city_name=boston,11
+list daily flights from denver to baltimore with first class service,flight,flight_days=daily;fromloc.city_name=denver;toloc.city_name=baltimore;class_type=first class,11
+us air next wednesday from cleveland to miami,flight,airline_name=us air;depart_date.date_relative=next;depart_date.day_name=wednesday;fromloc.city_name=cleveland;toloc.city_name=miami,11
+show me flights from baltimore to dallas,flight,fromloc.city_name=baltimore;toloc.city_name=dallas,11
+show me the flights from cincinnati,flight,fromloc.city_name=cincinnati,11
+show me all the flights that arrive in baltimore in the evening,flight,toloc.city_name=baltimore;arrive_time.period_of_day=evening,11
+show me all twa flights please,flight,airline_code=twa,11
+flight information on january twenty third 1992 from denver to san francisco,flight,depart_date.month_name=january;depart_date.day_number=twenty third;depart_date.year=1992;fromloc.city_name=denver;toloc.city_name=san francisco,11
+flights from pittsburgh to los angeles thursday evening,flight,fromloc.city_name=pittsburgh;toloc.city_name=los angeles;depart_date.day_name=thursday;depart_time.period_of_day=evening,11
+can you find out about the ground transportation available in atlanta,ground_service,city_name=atlanta,17
+can you give me information on all the flights from san francisco no from pittsburgh to san francisco on monday,flight,fromloc.city_name=san francisco;fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.day_name=monday,11
+do you have any flights from boston to dallas fort worth that stop over in philadelphia,flight,fromloc.city_name=boston;toloc.city_name=dallas fort worth;stoploc.city_name=philadelphia,11
+what are the ground transportation services in philadelphia,ground_service,city_name=philadelphia,17
+yes i 'm looking for a flight between oakland and boston with a stopover in dallas fort worth do you have one of those,flight,fromloc.city_name=oakland;toloc.city_name=boston;stoploc.city_name=dallas fort worth,11
+which airline has the smallest plane leaving pittsburgh and arriving in baltimore on july fourth,airline,mod=smallest;fromloc.city_name=pittsburgh;toloc.city_name=baltimore;arrive_date.month_name=july;arrive_date.day_number=fourth,5
+list flights between boston and san francisco that serve breakfast,flight,fromloc.city_name=boston;toloc.city_name=san francisco;meal_description=breakfast,11
+give me the flights from denver to baltimore on united airlines,flight,fromloc.city_name=denver;toloc.city_name=baltimore;airline_name=united airlines,11
+is there a limousine service available from the pittsburgh airport,ground_service,transport_type=limousine;fromloc.airport_name=pittsburgh airport,17
+what ground transportation is there in oakland,ground_service,city_name=oakland,17
+all flights from boston to philadelphia which show up on tuesday afternoon,flight,fromloc.city_name=boston;toloc.city_name=philadelphia;depart_date.day_name=tuesday;depart_time.period_of_day=afternoon,11
+what type of aircraft is used on the first flight from philadelphia to dallas in the morning,aircraft,flight_mod=first;fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_time.period_of_day=morning,1
+okay could you get me a round trip ticket from indianapolis to kansas city,airfare,round_trip=round trip;fromloc.city_name=indianapolis;toloc.city_name=kansas city,3
+in denver what kind of ground transportation is there from the airport to downtown,ground_service,city_name=denver,17
+is there limousine service available at baltimore airport,ground_service,transport_type=limousine;airport_name=baltimore airport,17
+i want to fly from milwaukee to orlando on either wednesday evening or thursday morning,flight,fromloc.city_name=milwaukee;toloc.city_name=orlando;depart_date.day_name=wednesday;depart_time.period_of_day=evening;or=or;depart_date.day_name=thursday;depart_time.period_of_day=morning,11
+list the morning flights at a 124 dollars from atlanta to boston,flight,depart_time.period_of_day=morning;fare_amount=124 dollars;fromloc.city_name=atlanta;toloc.city_name=boston,11
+what is the ground transportation available in the city of philadelphia,ground_service,city_name=philadelphia,17
+show me the flights from philadelphia to dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas,11
+show flights from denver to san francisco,flight,fromloc.city_name=denver;toloc.city_name=san francisco,11
+what is the earliest departure time from boston to denver,flight_time,flight_mod=earliest;flight_time=departure time;fromloc.city_name=boston;toloc.city_name=denver,15
+please show me all one way first class flights from indianapolis to memphis,flight,round_trip=one way;class_type=first class;fromloc.city_name=indianapolis;toloc.city_name=memphis,11
+all flights and fares from atlanta to dallas round trip after 12 pm less than 1100 dollars,flight+airfare,fromloc.city_name=atlanta;toloc.city_name=dallas;round_trip=round trip;depart_time.time_relative=after;depart_time.time=12 pm;cost_relative=less;fare_amount=1100 dollars,12
+is there a flight around 3 pm from charlotte to minneapolis,flight,depart_time.time_relative=around;depart_time.time=3 pm;fromloc.city_name=charlotte;toloc.city_name=minneapolis,11
+what is the ground transportation from boston airport to boston downtown,ground_service,fromloc.airport_name=boston airport;toloc.city_name=boston,17
+what do you have tomorrow morning from pittsburgh to atlanta,flight,depart_date.today_relative=tomorrow;depart_time.period_of_day=morning;fromloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+american airlines from phoenix to denver,flight,airline_name=american airlines;fromloc.city_name=phoenix;toloc.city_name=denver,11
+show all flights from pittsburgh to san francisco,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco,11
+list the flights from philadelphia to san francisco which have a layover in dallas,flight,fromloc.city_name=philadelphia;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+show me all the flights from denver to las vegas,flight,fromloc.city_name=denver;toloc.city_name=las vegas,11
+give me flights from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+i would like to leave early in the morning,flight,depart_time.period_mod=early;depart_time.period_of_day=morning,11
+give me the flights on december twenty seventh with the fares from indianapolis to orlando,flight,depart_date.month_name=december;depart_date.day_number=twenty seventh;fromloc.city_name=indianapolis;toloc.city_name=orlando,11
+is there a flight on eastern airlines from boston to denver,flight,airline_name=eastern airlines;fromloc.city_name=boston;toloc.city_name=denver,11
+which cities does united airlines service,city,airline_name=united airlines,9
+show me the flights from love field to any other airport,flight,fromloc.airport_name=love field,11
+flight from cleveland to nashville,flight,fromloc.city_name=cleveland;toloc.city_name=nashville,11
+show me all the eastern airlines flights leaving pittsburgh between 12 and 4 in the afternoon,flight,airline_name=eastern airlines;fromloc.city_name=pittsburgh;depart_time.start_time=12;depart_time.end_time=4;depart_time.period_of_day=afternoon,11
+i need a listing of flights from kansas city missouri to salt lake city utah,flight,fromloc.city_name=kansas city;fromloc.state_name=missouri;toloc.city_name=salt lake city;toloc.state_name=utah,11
+show me the airlines from love field,airline,fromloc.airport_name=love field,5
+is there one stop with the us air boston leaving at 705 to atlanta,flight,flight_stop=one stop;airline_name=us air;toloc.city_name=boston;arrive_time.time=705;toloc.city_name=atlanta,11
+on tuesday the twenty third flights from philadelphia to san francisco on american airlines,flight,depart_date.day_name=tuesday;depart_date.day_number=twenty third;fromloc.city_name=philadelphia;toloc.city_name=san francisco;airline_name=american airlines,11
+what airlines go to pittsburgh,airline,toloc.city_name=pittsburgh,5
+does eastern airlines fly between boston and washington,flight,airline_name=eastern airlines;fromloc.city_name=boston;toloc.city_name=washington,11
+flights from baltimore to san francisco,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+show me the flights from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+first flights from pittsburgh to atlanta on a thursday,flight,flight_mod=first;fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_date.day_name=thursday,11
+list all daily flights between boston and oakland as well as boston and oakland using american airline,flight,flight_days=daily;fromloc.city_name=boston;toloc.city_name=oakland;fromloc.city_name=boston;toloc.city_name=oakland;airline_name=american airline,11
+i would like a flight from atlanta to denver,flight,fromloc.city_name=atlanta;toloc.city_name=denver,11
+can i get a taxi from long beach airport to downtown long beach,ground_service,transport_type=taxi;fromloc.city_name=long beach;fromloc.city_name=long beach,17
+newark to cleveland,flight,fromloc.city_name=newark;toloc.city_name=cleveland,11
+show me the flights from st. petersburg to toronto that leave monday,flight,fromloc.city_name=st. petersburg;toloc.city_name=toronto;depart_date.day_name=monday,11
+show me all flights from philadelphia to denver on sunday which leave philadelphia after noon,flight,fromloc.city_name=philadelphia;toloc.city_name=denver;depart_date.day_name=sunday;fromloc.city_name=philadelphia;depart_time.time_relative=after;depart_time.time=noon,11
+what delta flights from cincinnati to new york city arrive at new york city before 6 pm on saturday,flight,airline_name=delta;fromloc.city_name=cincinnati;toloc.city_name=new york city;toloc.city_name=new york city;arrive_time.time_relative=before;arrive_time.time=6 pm;arrive_date.day_name=saturday,11
+i want to fly nonstop from denver to dallas,flight,flight_stop=nonstop;fromloc.city_name=denver;toloc.city_name=dallas,11
+what are the prices of the flights from atlanta to dallas in the morning,airfare,fromloc.city_name=atlanta;toloc.city_name=dallas;depart_time.period_of_day=morning,3
+i 'm planning a trip to pittsburgh and i live in denver can you help me,flight,toloc.city_name=pittsburgh;fromloc.city_name=denver,11
+show flights between boston and denver,flight,fromloc.city_name=boston;toloc.city_name=denver,11
+flight from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+i 'd like a limo in denver on august seventh,ground_service,transport_type=limo;fromloc.city_name=denver;depart_date.month_name=august;depart_date.day_number=seventh,17
+show me the flights on delta from atlanta in the morning,flight,airline_name=delta;fromloc.city_name=atlanta;depart_time.period_of_day=morning,11
+i need a flight from st. petersburg to miami for thursday,flight,fromloc.city_name=st. petersburg;toloc.city_name=miami;depart_date.day_name=thursday,11
+please show me flights from san francisco to dallas,flight,fromloc.city_name=san francisco;toloc.city_name=dallas,11
+show me the flights from denver to baltimore or washington dc that arrive before or around noon,flight,fromloc.city_name=denver;toloc.city_name=baltimore;or=or;toloc.city_name=washington;toloc.state_code=dc;arrive_time.time_relative=before;or=or;arrive_time.time_relative=around;arrive_time.time=noon,11
+what is the cheapest round trip fare on continental 1291 round trip denver san francisco,airfare,cost_relative=cheapest;round_trip=round trip;airline_name=continental;flight_number=1291;round_trip=round trip;fromloc.city_name=denver;fromloc.city_name=san francisco,3
+what is the cheapest fare between boston and san francisco,airfare,cost_relative=cheapest;fromloc.city_name=boston;toloc.city_name=san francisco,3
+what does flight code us mean,flight,airline_code=us,11
+what flights are there from atlanta to oakland on thursday,flight,fromloc.city_name=atlanta;toloc.city_name=oakland;depart_date.day_name=thursday,11
+what are the flights from kansas city to burbank on saturday may twenty two on america west,flight,fromloc.city_name=kansas city;toloc.city_name=burbank;depart_date.day_name=saturday;depart_date.month_name=may;depart_date.day_number=twenty two;airline_name=america west,11
+i would like information for flights from baltimore to dallas on early tuesday morning,flight,fromloc.city_name=baltimore;toloc.city_name=dallas;depart_time.period_mod=early;depart_date.day_name=tuesday;depart_time.period_of_day=morning,11
+i 'd like a nonstop flight from indianapolis to san diego that serves dinner what 's available,flight,flight_stop=nonstop;fromloc.city_name=indianapolis;toloc.city_name=san diego;meal_description=dinner,11
+what kind of aircraft does delta use before 8 am on august second from boston to denver,aircraft,airline_name=delta;depart_time.time_relative=before;depart_time.time=8 am;depart_date.month_name=august;depart_date.day_number=second;fromloc.city_name=boston;toloc.city_name=denver,1
+all flights leaving washington dc to san francisco that are first class,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=san francisco;class_type=first class,11
+show all flights from pittsburgh to san francisco on july twenty eighth 1991,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.month_name=july;depart_date.day_number=twenty eighth;depart_date.year=1991,11
+i 'd like a flight leaving atlanta august seventh and arriving in denver colorado august seventh leaving in the afternoon,flight,fromloc.city_name=atlanta;depart_date.month_name=august;depart_date.day_number=seventh;toloc.city_name=denver;toloc.state_name=colorado;arrive_date.month_name=august;arrive_date.day_number=seventh;depart_time.period_of_day=afternoon,11
+i need a flight from indianapolis to toronto reaching toronto on thursday morning,flight,fromloc.city_name=indianapolis;toloc.city_name=toronto;toloc.city_name=toronto;arrive_date.day_name=thursday;arrive_time.period_of_day=morning,11
+what type of aircraft leaves from boston to washington dc at 9 am during a weekday,aircraft,fromloc.city_name=boston;toloc.city_name=washington;toloc.state_code=dc;depart_time.time=9 am;flight_mod=weekday,1
+show me return flights from cincinnati to salt lake city nonstop,flight,round_trip=return;fromloc.city_name=cincinnati;toloc.city_name=salt lake city;flight_stop=nonstop,11
+how many first class flights are provided by american airlines,quantity,class_type=first class;airline_name=american airlines,20
+flights to baltimore,flight,toloc.city_name=baltimore,11
+what flights go from pittsburgh to denver after 2 pm,flight,fromloc.city_name=pittsburgh;toloc.city_name=denver;depart_time.time_relative=after;depart_time.time=2 pm,11
+i need a flight from kansas city to chicago that leaves wednesday and arrives in chicago around 7 pm,flight,fromloc.city_name=kansas city;toloc.city_name=chicago;depart_date.day_name=wednesday;toloc.city_name=chicago;arrive_time.time_relative=around;arrive_time.time=7 pm,11
+okay for now i would like information on a flight on april twenty seventh from pittsburgh to atlanta leaving early in the morning about 8 o'clock,flight,depart_date.month_name=april;depart_date.day_number=twenty seventh;fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_time.period_mod=early;depart_time.period_of_day=morning;depart_time.time_relative=about;depart_time.time=8 o'clock,11
+i would like to plan a flight on american airlines from boston to denver,flight,airline_name=american airlines;fromloc.city_name=boston;toloc.city_name=denver,11
+which airlines serve atlanta,airline,city_name=atlanta,5
+please list the wednesday american airline flights from milwaukee to san jose,flight,depart_date.day_name=wednesday;airline_name=american airline;fromloc.city_name=milwaukee;toloc.city_name=san jose,11
+please list all the takeoffs and landings for general mitchell international,flight,airport_name=general mitchell international,11
+round trip fares from baltimore to philadelphia under 1000 dollars,airfare,round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=philadelphia;cost_relative=under;fare_amount=1000 dollars,3
+show me the flights from denver to san francisco,flight,fromloc.city_name=denver;toloc.city_name=san francisco,11
+what is fare code h,abbreviation,fare_basis_code=h,0
+i want a flight from toronto to san diego that stops in st. louis are there flights,flight,fromloc.city_name=toronto;toloc.city_name=san diego;stoploc.city_name=st. louis,11
+i would like a flight from dallas to philadelphia,flight,fromloc.city_name=dallas;toloc.city_name=philadelphia,11
+give me the flights on tuesday from los angeles to pittsburgh,flight,depart_date.day_name=tuesday;fromloc.city_name=los angeles;toloc.city_name=pittsburgh,11
+what is the earliest flight leaving denver and arriving in baltimore on united airlines first class on july fourth,flight,flight_mod=earliest;fromloc.city_name=denver;toloc.city_name=baltimore;airline_name=united airlines;class_type=first class;arrive_date.month_name=july;arrive_date.day_number=fourth,11
+please list all flights between boston and atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+what is the cheapest flight from long beach to memphis,flight,cost_relative=cheapest;fromloc.city_name=long beach;toloc.city_name=memphis,11
+newark to cleveland,flight,fromloc.city_name=newark;toloc.city_name=cleveland,11
+is there a flight between oakland and boston with a stopover in dallas fort worth on twa,flight,fromloc.city_name=oakland;toloc.city_name=boston;stoploc.city_name=dallas fort worth;airline_code=twa,11
+flights from phoenix to las vegas,flight,fromloc.city_name=phoenix;toloc.city_name=las vegas,11
+please show me the return flight number from toronto to st. petersburg,flight_no,fromloc.city_name=toronto;toloc.city_name=st. petersburg,14
+do you have a united flight from boston to washington,flight,airline_name=united;fromloc.city_name=boston;toloc.city_name=washington,11
+what is the latest flight departing from boston to san francisco,flight,flight_mod=latest;fromloc.city_name=boston;toloc.city_name=san francisco,11
+what 's the latest flight from houston to dallas,flight,flight_mod=latest;fromloc.city_name=houston;toloc.city_name=dallas,11
+show flights from pittsburgh to oakland,flight,fromloc.city_name=pittsburgh;toloc.city_name=oakland,11
+list the fares of midway airlines flights from boston to philadelphia,airfare,airline_name=midway airlines;fromloc.city_name=boston;toloc.city_name=philadelphia,3
+show me flights from milwaukee to orlando on a thursday before noon,flight,fromloc.city_name=milwaukee;toloc.city_name=orlando;depart_date.day_name=thursday;depart_time.time_relative=before;depart_time.time=noon,11
+i want to see the cheapest flight from atlanta to baltimore,flight,cost_relative=cheapest;fromloc.city_name=atlanta;toloc.city_name=baltimore,11
+i would like to book a flight on june first from los angeles to pittsburgh in the late afternoon,flight,depart_date.month_name=june;depart_date.day_number=first;fromloc.city_name=los angeles;toloc.city_name=pittsburgh;depart_time.period_of_day=late afternoon,11
+does midwest express serve philadelphia,flight,airline_name=midwest;city_name=philadelphia,11
+show me all the direct flights from baltimore to atlanta,flight,connect=direct;fromloc.city_name=baltimore;toloc.city_name=atlanta,11
+all right give me the flight times in the morning on september twentieth from pittsburgh to san francisco,flight_time,flight_time=flight times;depart_time.period_of_day=morning;depart_date.month_name=september;depart_date.day_number=twentieth;fromloc.city_name=pittsburgh;toloc.city_name=san francisco,15
+give me the flights and fares on december twenty seventh from indianapolis to orlando,flight+airfare,depart_date.month_name=december;depart_date.day_number=twenty seventh;fromloc.city_name=indianapolis;toloc.city_name=orlando,12
+show me the flights from dallas to baltimore in first class,flight,fromloc.city_name=dallas;toloc.city_name=baltimore;class_type=first class,11
+what flights go from philadelphia to dallas via atlanta,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;stoploc.city_name=atlanta,11
+show me the flights from boston to san francisco that arrive in the afternoon,flight,fromloc.city_name=boston;toloc.city_name=san francisco;arrive_time.period_of_day=afternoon,11
+what flights from toronto to philadelphia,flight,fromloc.city_name=toronto;toloc.city_name=philadelphia,11
+show me airports in washington dc,airport,city_name=washington;state_code=dc,7
+show me flights from oakland to dallas on sunday,flight,fromloc.city_name=oakland;toloc.city_name=dallas;depart_date.day_name=sunday,11
+does american airlines fly from boston to san francisco,flight,airline_name=american airlines;fromloc.city_name=boston;toloc.city_name=san francisco,11
+which airlines have flights between philadelphia and pittsburgh,airline,fromloc.city_name=philadelphia;toloc.city_name=pittsburgh,5
+list the flights from dallas to baltimore,flight,fromloc.city_name=dallas;toloc.city_name=baltimore,11
+show me the flights arriving at love field from other airports,flight,toloc.airport_name=love field,11
+tell me the flights from baltimore to dallas,flight,fromloc.city_name=baltimore;toloc.city_name=dallas,11
+flights from kansas city to cleveland,flight,fromloc.city_name=kansas city;toloc.city_name=cleveland,11
+what are your flights from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+what are the evening flights flying out of dallas and going to san francisco on american airlines,flight,depart_time.period_of_day=evening;fromloc.city_name=dallas;toloc.city_name=san francisco;airline_name=american airlines,11
+show me flights on monday from philadelphia to boston after 7 am,flight,depart_date.day_name=monday;fromloc.city_name=philadelphia;toloc.city_name=boston;depart_time.time_relative=after;depart_time.time=7 am,11
+what evening flights do you have available from baltimore to philadelphia,flight,depart_time.period_of_day=evening;fromloc.city_name=baltimore;toloc.city_name=philadelphia,11
+all flights phoenix to sfo,flight,fromloc.city_name=phoenix;toloc.airport_code=sfo,11
+show me flights from dallas to atlanta,flight,fromloc.city_name=dallas;toloc.city_name=atlanta,11
+please list all flights on united airlines and northwest airlines that go into denver and all flights on northwest airlines and united airlines that fly out of denver,flight,airline_name=united airlines;airline_name=northwest airlines;toloc.city_name=denver;airline_name=northwest airlines;airline_name=united airlines;fromloc.city_name=denver,11
+do you have a flight from charlotte to atlanta next tuesday,flight,fromloc.city_name=charlotte;toloc.city_name=atlanta;depart_date.date_relative=next;depart_date.day_name=tuesday,11
+show me the ground transportation at denver,ground_service,city_name=denver,17
+show me the flights from baltimore to boston,flight,fromloc.city_name=baltimore;toloc.city_name=boston,11
+phoenix to newark on wednesday,flight,fromloc.city_name=phoenix;toloc.city_name=newark;depart_date.day_name=wednesday,11
+please give me the flights from boston to pittsburgh on thursday of next week,flight,fromloc.city_name=boston;toloc.city_name=pittsburgh;depart_date.day_name=thursday;depart_date.date_relative=next,11
+show me round trip first class tickets from new york to miami,airfare,round_trip=round trip;class_type=first class;fromloc.city_name=new york;toloc.city_name=miami,3
+what flights from kansas city to denver after 845 in the morning,flight,fromloc.city_name=kansas city;toloc.city_name=denver;depart_time.time_relative=after;depart_time.time=845;depart_time.period_of_day=morning,11
+please show me the round trip flights from st. petersburg to toronto,flight,round_trip=round trip;fromloc.city_name=st. petersburg;toloc.city_name=toronto,11
+i 'm sorry i wanted to fly twa is there a flight between oakland and boston with a stopover in dallas fort worth on twa,flight,airline_code=twa;fromloc.city_name=oakland;toloc.city_name=boston;stoploc.city_name=dallas fort worth;airline_code=twa,11
+show me all flights from charlotte to columbus,flight,fromloc.city_name=charlotte;toloc.city_name=columbus,11
+i need a flight from san diego to indianapolis leaving in the afternoon on tuesday,flight,fromloc.city_name=san diego;toloc.city_name=indianapolis;depart_time.period_of_day=afternoon;depart_date.day_name=tuesday,11
+show me all the flights from burbank,flight,fromloc.city_name=burbank,11
+i need a round trip flight from cincinnati to san jose california,flight,round_trip=round trip;fromloc.city_name=cincinnati;toloc.city_name=san jose;toloc.state_name=california,11
+what is the round trip first class fare on united from boston to san francisco,airfare,round_trip=round trip;class_type=first class;airline_name=united;fromloc.city_name=boston;toloc.city_name=san francisco,3
+i need to go from boston to atlanta in the same day find me the earliest flight from boston,flight,fromloc.city_name=boston;toloc.city_name=atlanta;depart_date.date_relative=same;flight_mod=earliest;fromloc.city_name=boston,11
+show me all the one way fares from tacoma to montreal,airfare,round_trip=one way;fromloc.city_name=tacoma;toloc.city_name=montreal,3
+show me all flights from dallas to san francisco,flight,fromloc.city_name=dallas;toloc.city_name=san francisco,11
+i would like to see the flights from denver to philadelphia,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+information on first class round trip from pittsburgh to san francisco,flight,class_type=first class;round_trip=round trip;fromloc.city_name=pittsburgh;toloc.city_name=san francisco,11
+is there a flight between washington dc and san francisco on us air at 8 am,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=san francisco;airline_name=us air;depart_time.time=8 am,11
+is twa flight 497766 from st. petersburg to milwaukee with one stop available tomorrow morning,flight,airline_code=twa;flight_number=497766;fromloc.city_name=st. petersburg;toloc.city_name=milwaukee;flight_stop=one stop;depart_date.today_relative=tomorrow;depart_time.period_of_day=morning,11
+please list pm flights from boston pittsburgh,flight,depart_time.period_of_day=pm;fromloc.city_name=boston;fromloc.city_name=pittsburgh,11
+give me the earliest flight tomorrow from st. petersburg to milwaukee on a airline other than twa,flight,flight_mod=earliest;depart_date.today_relative=tomorrow;fromloc.city_name=st. petersburg;toloc.city_name=milwaukee;mod=other;airline_code=twa,11
+show me flights from denver to boston on tuesday,flight,fromloc.city_name=denver;toloc.city_name=boston;depart_date.day_name=tuesday,11
+show me the flights from san francisco to boston,flight,fromloc.city_name=san francisco;toloc.city_name=boston,11
+ground transportation minneapolis,ground_service,city_name=minneapolis,17
+what airlines fly between boston and atlanta,airline,fromloc.city_name=boston;toloc.city_name=atlanta,5
+what time zone is denver in,city,city_name=denver,9
+what is fare class h,abbreviation,fare_basis_code=h,0
+what flights go from boston to atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta,11
+please show me flights which cost less than or equal to 466 dollars from new york to miami leaving on a tuesday,flight,cost_relative=less;fare_amount=466 dollars;fromloc.city_name=new york;toloc.city_name=miami;depart_date.day_name=tuesday,11
+what are my options for a minneapolis back to indianapolis flight around noontime,flight,fromloc.city_name=minneapolis;toloc.city_name=indianapolis;depart_time.time_relative=around;depart_time.time=noontime,11
+flights from denver to philadelphia include fares,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+what is the first flight from boston to atlanta and what is the last flight from atlanta to boston,flight,flight_mod=first;fromloc.city_name=boston;toloc.city_name=atlanta;flight_mod=last;fromloc.city_name=atlanta;toloc.city_name=boston,11
+what flights are there from pittsburgh to san francisco on friday,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_date.day_name=friday,11
+show me the flights from baltimore to boston,flight,fromloc.city_name=baltimore;toloc.city_name=boston,11
+show me the prices of first class tickets on us air round trip from cleveland to miami,airfare,class_type=first class;airline_name=us air;round_trip=round trip;fromloc.city_name=cleveland;toloc.city_name=miami,3
+i need ground transportation in dallas please show me what 's available,ground_service,city_name=dallas,17
+show me next wednesday 's flights between phoenix and milwaukee,flight,depart_date.date_relative=next;depart_date.day_name=wednesday 's;fromloc.city_name=phoenix;toloc.city_name=milwaukee,11
+i 'd like to make a round trip from la to newark by way of charlotte,flight,round_trip=round trip;fromloc.city_name=la;toloc.city_name=newark;stoploc.city_name=charlotte,11
+show flights from pittsburgh into san francisco arriving after 12 noon,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;arrive_time.time_relative=after;arrive_time.time=12 noon,11
+flights from washington august second,flight,fromloc.city_name=washington;depart_date.month_name=august;depart_date.day_number=second,11
+what flights are there from denver to atlanta,flight,fromloc.city_name=denver;toloc.city_name=atlanta,11
+all flights from boston to washington dc on the tenth of november,flight,fromloc.city_name=boston;toloc.city_name=washington;toloc.state_code=dc;depart_date.day_number=tenth;depart_date.month_name=november,11
+i need a flight from denver to philadelphia on saturday,flight,fromloc.city_name=denver;toloc.city_name=philadelphia;depart_date.day_name=saturday,11
+show me all flights from boston to dfw,flight,fromloc.city_name=boston;toloc.airport_code=dfw,11
+list all us air flights from miami to cleveland leaving on sunday afternoon,flight,airline_name=us air;fromloc.city_name=miami;toloc.city_name=cleveland;depart_date.day_name=sunday;depart_time.period_of_day=afternoon,11
+list all flights arriving and departing at general mitchell international,flight,fromloc.airport_name=general mitchell international,11
+flights from dc to denver,flight,fromloc.state_code=dc;toloc.city_name=denver,11
+from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+how much is a first class ticket from boston to san francisco,airfare,class_type=first class;fromloc.city_name=boston;toloc.city_name=san francisco,3
+now i 'd like information on flights from denver to san francisco,flight,fromloc.city_name=denver;toloc.city_name=san francisco,11
+what flights available between pittsburgh and baltimore on august eleventh,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore;depart_date.month_name=august;depart_date.day_number=eleventh,11
+show me all daily flights between milwaukee and orlando,flight,flight_days=daily;fromloc.city_name=milwaukee;toloc.city_name=orlando,11
+is there a flight from boston to san francisco making a stopover in dallas fort worth,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=dallas fort worth,11
+show flights and fare information from pittsburgh connecting through denver to oakland,flight,fromloc.city_name=pittsburgh;connect=connecting;stoploc.city_name=denver;toloc.city_name=oakland,11
+i need one first class ticket from dallas fort worth to san francisco,airfare,class_type=first class;fromloc.city_name=dallas fort worth;toloc.city_name=san francisco,3
+please give me the flights from denver to pittsburgh which leave in the morning on july second,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;depart_time.period_of_day=morning;depart_date.month_name=july;depart_date.day_number=second,11
+can you show me one way economy fares from dallas to atlanta,airfare,round_trip=one way;economy=economy;fromloc.city_name=dallas;toloc.city_name=atlanta,3
+please list the flights from toronto to washington dc,flight,fromloc.city_name=toronto;toloc.city_name=washington;toloc.state_code=dc,11
+from toronto to atlanta in the afternoon,flight,fromloc.city_name=toronto;toloc.city_name=atlanta;depart_time.period_of_day=afternoon,11
+can you please tell me the type of aircraft used flying from atlanta to denver on eastern flight 825 leaving at 555,aircraft,fromloc.city_name=atlanta;toloc.city_name=denver;airline_name=eastern;flight_number=825;depart_time.time=555,1
+show me the flight that leaves philadelphia in the afternoon and arrives in the evening in denver,flight,fromloc.city_name=philadelphia;depart_time.period_of_day=afternoon;arrive_time.period_of_day=evening;toloc.city_name=denver,11
+give me fares from atlanta to baltimore,airfare,fromloc.city_name=atlanta;toloc.city_name=baltimore,3
+what is the latest return flight from atlanta to boston,flight,flight_mod=latest;fromloc.city_name=atlanta;toloc.city_name=boston,11
+show me the daily flight schedule between boston and pittsburgh,flight,flight_days=daily;flight_time=flight schedule;fromloc.city_name=boston;toloc.city_name=pittsburgh,11
+dallas to san francisco leaving after 4 in the afternoon please,flight,fromloc.city_name=dallas;toloc.city_name=san francisco;depart_time.time_relative=after;depart_time.time=4;depart_time.period_of_day=afternoon,11
+show me the round trip tickets from baltimore to atlanta,airfare,round_trip=round trip;fromloc.city_name=baltimore;toloc.city_name=atlanta,3
+i would like to see the daily flights from baltimore to philadelphia,flight,flight_days=daily;fromloc.city_name=baltimore;toloc.city_name=philadelphia,11
+can you list all flights departing from toronto and landing in san diego with a stopover in denver,flight,fromloc.city_name=toronto;toloc.city_name=san diego;stoploc.city_name=denver,11
+show me all flights from philadelphia to boston on monday which serve a meal and arrive before noon,flight,fromloc.city_name=philadelphia;toloc.city_name=boston;depart_date.day_name=monday;meal=meal;arrive_time.time_relative=before;arrive_time.time=noon,11
+show me flights from pittsburgh to atlanta on monday afternoon,flight,fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_date.day_name=monday;depart_time.period_of_day=afternoon,11
+what flights are available thursday afternoon from baltimore to atlanta,flight,depart_date.day_name=thursday;depart_time.period_of_day=afternoon;fromloc.city_name=baltimore;toloc.city_name=atlanta,11
+show me all flights from baltimore to san francisco,flight,fromloc.city_name=baltimore;toloc.city_name=san francisco,11
+what are the cheapest round trip flights from denver to pittsburgh,flight,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+what 's the cheapest round trip fare between dallas and baltimore,airfare,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=dallas;toloc.city_name=baltimore,3
+list evening flights tomorrow from phoenix to detroit,flight,depart_time.period_of_day=evening;depart_date.today_relative=tomorrow;fromloc.city_name=phoenix;toloc.city_name=detroit,11
+i would like to fly from denver to pittsburgh and atlanta,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;toloc.city_name=atlanta,11
+please show me flights from pittsburgh to atlanta on wednesday morning serving breakfast,flight,fromloc.city_name=pittsburgh;toloc.city_name=atlanta;depart_date.day_name=wednesday;depart_time.period_of_day=morning;meal_description=breakfast,11
+what flights go from newark to boston after 5 pm,flight,fromloc.city_name=newark;toloc.city_name=boston;depart_time.time_relative=after;depart_time.time=5 pm,11
+show me flights from boston to denver on wednesday,flight,fromloc.city_name=boston;toloc.city_name=denver;depart_date.day_name=wednesday,11
+what northwest flights stop in denver,flight,airline_name=northwest;stoploc.city_name=denver,11
+show me flights from new york to miami on a tuesday with a round trip fare less than 466 dollars,flight,fromloc.city_name=new york;toloc.city_name=miami;depart_date.day_name=tuesday;round_trip=round trip;cost_relative=less;fare_amount=466 dollars,11
+from las vegas to montreal,flight,fromloc.city_name=las vegas;toloc.city_name=montreal,11
+please tell me how many nonstop flights there are from boston to atlanta,quantity,flight_stop=nonstop;fromloc.city_name=boston;toloc.city_name=atlanta,20
+flights from new york city to montreal,flight,fromloc.city_name=new york city;toloc.city_name=montreal,11
+show me all the night fares between philadelphia and san francisco,airfare,depart_time.period_of_day=night;fromloc.city_name=philadelphia;toloc.city_name=san francisco,3
+i 'd like to find the least expensive one way fare from boston to philadelphia,airfare,cost_relative=least expensive;round_trip=one way;fromloc.city_name=boston;toloc.city_name=philadelphia,3
+show me saturday and sunday 's flights from milwaukee to phoenix on american airlines,flight,depart_date.day_name=saturday;depart_date.day_name=sunday 's;fromloc.city_name=milwaukee;toloc.city_name=phoenix;airline_name=american airlines,11
+what flights are there from milwaukee to phoenix on saturday,flight,fromloc.city_name=milwaukee;toloc.city_name=phoenix;depart_date.day_name=saturday,11
+on friday i need to see all flights that leave atlanta and arrive in dallas before 6 pm,flight,depart_date.day_name=friday;fromloc.city_name=atlanta;toloc.city_name=dallas;arrive_time.time_relative=before;arrive_time.time=6 pm,11
+cheapest round trip airfare from tacoma to orlando,airfare,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=tacoma;toloc.city_name=orlando,3
+show me all flight from san francisco to oakland,flight,fromloc.city_name=san francisco;toloc.city_name=oakland,11
+can you list costs of denver rental cars,ground_fare,city_name=denver;transport_type=rental cars,16
+okay i 'd like a flight from boston to san francisco that leaves before 8 am,flight,fromloc.city_name=boston;toloc.city_name=san francisco;depart_time.time_relative=before;depart_time.time=8 am,11
+list all flights from boston to san francisco with the maximum number of stops,flight,fromloc.city_name=boston;toloc.city_name=san francisco;flight_stop=maximum number of stops,11
+what are the afternoon flights leaving from dallas to san francisco on american airlines,flight,depart_time.period_of_day=afternoon;fromloc.city_name=dallas;toloc.city_name=san francisco;airline_name=american airlines,11
+how do i get downtown from the toronto airport,ground_service,fromloc.airport_name=toronto airport,17
+what is the fare on continental 271 from dallas to san francisco,airfare,airline_name=continental;flight_number=271;fromloc.city_name=dallas;toloc.city_name=san francisco,3
+what are the flights from atlanta to dallas,flight,fromloc.city_name=atlanta;toloc.city_name=dallas,11
+list all flights on sunday from san francisco to pittsburgh nonstop,flight,depart_date.day_name=sunday;fromloc.city_name=san francisco;toloc.city_name=pittsburgh;flight_stop=nonstop,11
+can you show me the cheapest round trip flights between denver and pittsburgh,flight,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+please show me round trip tickets from denver to oakland,airfare,round_trip=round trip;fromloc.city_name=denver;toloc.city_name=oakland,3
+i would like to fly from boston to philadelphia next thursday,flight,fromloc.city_name=boston;toloc.city_name=philadelphia;depart_date.date_relative=next;depart_date.day_name=thursday,11
+what planes are used by twa,aircraft,airline_code=twa,1
+oakland to denver,flight,fromloc.city_name=oakland;toloc.city_name=denver,11
+show me evening flights to baltimore,flight,period_of_day=evening;toloc.city_name=baltimore,11
+how much does a first class round trip ticket from cleveland to miami on us air cost,airfare,class_type=first class;round_trip=round trip;fromloc.city_name=cleveland;toloc.city_name=miami;airline_name=us air,3
+show me all flights from san francisco to boston on november tenth,flight,fromloc.city_name=san francisco;toloc.city_name=boston;depart_date.month_name=november;depart_date.day_number=tenth,11
+all flights and fares from pittsburgh to dallas round trip after 12 pm less than 1100 dollars,flight+airfare,fromloc.city_name=pittsburgh;toloc.city_name=dallas;round_trip=round trip;depart_time.time_relative=after;depart_time.time=12 pm;cost_relative=less;fare_amount=1100 dollars,12
+show me all the flights between philadelphia and denver,flight,fromloc.city_name=philadelphia;toloc.city_name=denver,11
+which flights depart los angeles destination charlotte that leave on a monday morning,flight,fromloc.city_name=los angeles;toloc.city_name=charlotte;depart_date.day_name=monday;depart_time.period_of_day=morning,11
+flights from memphis to las vegas on sunday,flight,fromloc.city_name=memphis;toloc.city_name=las vegas;depart_date.day_name=sunday,11
+please list any flight available leaving oakland california tuesday arriving philadelphia wednesday,flight,fromloc.city_name=oakland;fromloc.state_name=california;depart_date.day_name=tuesday;toloc.city_name=philadelphia;arrive_date.day_name=wednesday,11
+what flights go from boston to san francisco with a stop in dallas,flight,fromloc.city_name=boston;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+show me ground transportation for dallas,ground_service,city_name=dallas,17
+i want to fly from miami to chicago on american airlines and arrive at around 5 o'clock in the afternoon show me all flights,flight,fromloc.city_name=miami;toloc.city_name=chicago;airline_name=american airlines;arrive_time.time_relative=around;arrive_time.time=5 o'clock;arrive_time.period_of_day=afternoon,11
+show me dallas to boston flights,flight,fromloc.city_name=dallas;toloc.city_name=boston,11
+philadelphia to dallas arriving before 1 in the afternoon,flight,fromloc.city_name=philadelphia;toloc.city_name=dallas;arrive_time.time_relative=before;arrive_time.time=1;arrive_time.period_of_day=afternoon,11
+give me the flights from pittsburgh to los angeles on thursday evening,flight,fromloc.city_name=pittsburgh;toloc.city_name=los angeles;depart_date.day_name=thursday;depart_time.period_of_day=evening,11
+what are the flights from milwaukee to tampa,flight,fromloc.city_name=milwaukee;toloc.city_name=tampa,11
+what flight from boston to atlanta arrives earliest in atlanta,flight,fromloc.city_name=boston;toloc.city_name=atlanta;flight_mod=earliest;toloc.city_name=atlanta,11
+i 'm looking for a flight leaving denver traveling to atlanta and stopping at pittsburgh is this possible,flight,fromloc.city_name=denver;toloc.city_name=atlanta;stoploc.city_name=pittsburgh,11
+what flights are there between nashville and st. louis which are nonstop and arrive after noon and before 8 pm,flight,fromloc.city_name=nashville;toloc.city_name=st. louis;flight_stop=nonstop;arrive_time.time_relative=after;arrive_time.time=noon;arrive_time.time_relative=before;arrive_time.time=8 pm,11
+all right would you let me know type of aircraft united airlines is using on the flights from denver to san francisco i would like to know the type of aircraft that they use on these flights before 10 in the morning,aircraft,airline_name=united airlines;fromloc.city_name=denver;toloc.city_name=san francisco;depart_time.time_relative=before;depart_time.time=10;depart_time.period_of_day=morning,1
+can you list all flights from chicago to milwaukee,flight,fromloc.city_name=chicago;toloc.city_name=milwaukee,11
+what flight do you have from pittsburgh to san francisco on the morning of august twenty seventh,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco;depart_time.period_of_day=morning;depart_date.month_name=august;depart_date.day_number=twenty seventh,11
+information on flights from pittsburgh to san francisco,flight,fromloc.city_name=pittsburgh;toloc.city_name=san francisco,11
+i 'd like to know what flights united airline has from dallas to san francisco,flight,airline_name=united airline;fromloc.city_name=dallas;toloc.city_name=san francisco,11
+how about arrivals for american in atlanta,flight,airline_name=american;toloc.city_name=atlanta,11
+i would like to fly from atlanta to san francisco with a stopover in dallas,flight,fromloc.city_name=atlanta;toloc.city_name=san francisco;stoploc.city_name=dallas,11
+can you give me information on transportation from the airport in philadelphia to downtown philadelphia,ground_service,fromloc.city_name=philadelphia;toloc.city_name=philadelphia,17
+i would like to book a flight on continental airlines from chicago to seattle on june first,flight,airline_name=continental airlines;fromloc.city_name=chicago;toloc.city_name=seattle;depart_date.month_name=june;depart_date.day_number=first,11
+boston to denver monday,flight,fromloc.city_name=boston;toloc.city_name=denver;depart_date.day_name=monday,11
+i 'd like to book the cheapest flight from atlanta to denver on august first,flight,cost_relative=cheapest;fromloc.city_name=atlanta;toloc.city_name=denver;depart_date.month_name=august;depart_date.day_number=first,11
+okay could you tell me what flight leaves dallas to san francisco by united airline,flight,fromloc.city_name=dallas;toloc.city_name=san francisco;airline_name=united airline,11
+can you list all flights from toronto to san diego,flight,fromloc.city_name=toronto;toloc.city_name=san diego,11
+please list the american airlines flights from philadelphia to dallas on tuesday october first,flight,airline_name=american airlines;fromloc.city_name=philadelphia;toloc.city_name=dallas;depart_date.day_name=tuesday;depart_date.month_name=october;depart_date.day_number=first,11
+what does restriction ap 57 mean,abbreviation,restriction_code=ap 57,0
+tell me about flights from indianapolis to houston,flight,fromloc.city_name=indianapolis;toloc.city_name=houston,11
+where does canadian airlines international fly to,flight,airline_name=canadian airlines international,11
+what is the schedule of flights from boston to denver next monday,flight_time,flight_time=schedule;fromloc.city_name=boston;toloc.city_name=denver;depart_date.date_relative=next;depart_date.day_name=monday,15
+list all nonstop flights from los angeles to pittsburgh which arrive before 5 pm on tuesday,flight,flight_stop=nonstop;fromloc.city_name=los angeles;toloc.city_name=pittsburgh;arrive_time.time_relative=before;arrive_time.time=5 pm;arrive_date.day_name=tuesday,11
+which airlines have connections between pittsburgh and baltimore,airline,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,5
+what are the different classes that an airline offers,flight,,11
+what are the fares for flights between atlanta and dfw,airfare,fromloc.city_name=atlanta;toloc.airport_code=dfw,3
+what 's the cheapest flight from san francisco to boston,flight,cost_relative=cheapest;fromloc.city_name=san francisco;toloc.city_name=boston,11
+i 'd like an early flight tomorrow from columbus to nashville,flight,flight_mod=early;depart_date.today_relative=tomorrow;fromloc.city_name=columbus;toloc.city_name=nashville,11
+show me all first class fares from new york to miami leaving on a tuesday,airfare,class_type=first class;fromloc.city_name=new york;toloc.city_name=miami;depart_date.day_name=tuesday,3
+i want to see the cheapest flight from denver to pittsburgh,flight,cost_relative=cheapest;fromloc.city_name=denver;toloc.city_name=pittsburgh,11
+how much is a round trip fare from nashville to seattle,airfare,round_trip=round trip;fromloc.city_name=nashville;toloc.city_name=seattle,3
+show me flights from washington dc to san francisco with a stopover in denver,flight,fromloc.city_name=washington;fromloc.state_code=dc;toloc.city_name=san francisco;stoploc.city_name=denver,11
+please show me all round trip flights from new york to miami,flight,round_trip=round trip;fromloc.city_name=new york;toloc.city_name=miami,11
+find travel arrangements for a one way flight from boston to pittsburgh,flight,round_trip=one way;fromloc.city_name=boston;toloc.city_name=pittsburgh,11
+list the flights arriving in boston from atlanta on august fifth,flight,toloc.city_name=boston;fromloc.city_name=atlanta;arrive_date.month_name=august;arrive_date.day_number=fifth,11
+flights from philadelphia to oakland,flight,fromloc.city_name=philadelphia;toloc.city_name=oakland,11
+do the airlines still offer first class,airline,class_type=first class,5
+show flights from memphis to las vegas,flight,fromloc.city_name=memphis;toloc.city_name=las vegas,11
+what ground transportation is there in denver,ground_service,city_name=denver,17
+how much does it cost to fly on american from dallas to baltimore,airfare,airline_name=american;fromloc.city_name=dallas;toloc.city_name=baltimore,3
+what flights from denver to pittsburgh arrive before 8 in the morning,flight,fromloc.city_name=denver;toloc.city_name=pittsburgh;arrive_time.time_relative=before;arrive_time.time=8;arrive_time.period_of_day=morning,11
+show me ground transportation in denver during weekdays,ground_service,city_name=denver,17
+i need a flight to seattle leaving from baltimore making a stop in minneapolis,flight,toloc.city_name=seattle;fromloc.city_name=baltimore;stoploc.city_name=minneapolis,11
+what is the earliest flight that eastern has between boston and washington,flight,flight_mod=earliest;airline_name=eastern;fromloc.city_name=boston;toloc.city_name=washington,11
+i would like to know flights on june fifteenth from long beach to columbus after 12 noon please,flight,depart_date.month_name=june;depart_date.day_number=fifteenth;fromloc.city_name=long beach;toloc.city_name=columbus;depart_time.time_relative=after;depart_time.time=12 noon,11
+i 'd like to make a trip between atlanta and boston i wish to know the cheapest fare,flight,fromloc.city_name=atlanta;toloc.city_name=boston;cost_relative=cheapest,11
+i 'd like to fly continental airlines between boston and philadelphia,flight,airline_name=continental airlines;fromloc.city_name=boston;toloc.city_name=philadelphia,11
+how many fares are there one way from tacoma to montreal,quantity,round_trip=one way;fromloc.city_name=tacoma;toloc.city_name=montreal,20
+what is the cheapest fare from baltimore to dallas in any class,airfare,cost_relative=cheapest;fromloc.city_name=baltimore;toloc.city_name=dallas,3
+from los angeles to phoenix on a friday,flight,fromloc.city_name=los angeles;toloc.city_name=phoenix;depart_date.day_name=friday,11
+i 'm trying to find the flight number from a flight from orlando to cleveland on us air and it arrives around 10 pm,flight_no,fromloc.city_name=orlando;toloc.city_name=cleveland;airline_name=us air;arrive_time.time_relative=around;arrive_time.time=10 pm,14
+okay can you tell me the earliest flight which leaves from philadelphia to dallas,flight,flight_mod=earliest;fromloc.city_name=philadelphia;toloc.city_name=dallas,11
+list daily flights from denver to boston,flight,flight_days=daily;fromloc.city_name=denver;toloc.city_name=boston,11
+show flights from pittsburgh to oakland,flight,fromloc.city_name=pittsburgh;toloc.city_name=oakland,11
+flight from denver to philadelphia,flight,fromloc.city_name=denver;toloc.city_name=philadelphia,11
+what ground transportation is available at the baltimore airport,ground_service,airport_name=baltimore airport,17
+what 's the ground transportation from oakland to san francisco,ground_service,fromloc.city_name=oakland;toloc.city_name=san francisco,17
+please list the flights taking off and landing on general mitchell international airport,flight,fromloc.airport_name=general mitchell international airport,11
+show me all the flights between oakland and denver,flight,fromloc.city_name=oakland;toloc.city_name=denver,11
+okay i just want to know the cheapest fare from atlanta to boston,airfare,cost_relative=cheapest;fromloc.city_name=atlanta;toloc.city_name=boston,3
+what does ea mean,abbreviation,airline_code=ea,0
+which airline offers the cheapest rate going from dallas to baltimore on july fourth,airline,cost_relative=cheapest;fromloc.city_name=dallas;toloc.city_name=baltimore;depart_date.month_name=july;depart_date.day_number=fourth,5
+i would like information on flights from oakland california to dallas leaving on sunday morning,flight,fromloc.city_name=oakland;fromloc.state_name=california;toloc.city_name=dallas;depart_date.day_name=sunday;depart_time.period_of_day=morning,11
+i want to fly from boston to baltimore,flight,fromloc.city_name=boston;toloc.city_name=baltimore,11
+what 's the earliest flight from san francisco to boston,flight,flight_mod=earliest;fromloc.city_name=san francisco;toloc.city_name=boston,11
+list the cheapest round trip flights from orlando to kansas city,flight,cost_relative=cheapest;round_trip=round trip;fromloc.city_name=orlando;toloc.city_name=kansas city,11
+are there any nonstop flights from philadelphia to denver that arrive before 5 pm,flight,flight_stop=nonstop;fromloc.city_name=philadelphia;toloc.city_name=denver;arrive_time.time_relative=before;arrive_time.time=5 pm,11
+what does ground transportation look like in oakland,ground_service,city_name=oakland,17
+is there a flight on delta airlines from boston to denver,flight,airline_name=delta airlines;fromloc.city_name=boston;toloc.city_name=denver,11
+show me all flights from pittsburgh to baltimore,flight,fromloc.city_name=pittsburgh;toloc.city_name=baltimore,11
+give me the cheapest flight from dallas to baltimore on saturday,flight,cost_relative=cheapest;fromloc.city_name=dallas;toloc.city_name=baltimore;depart_date.day_name=saturday,11
+leaving washington going to san francisco the latest flight,flight,fromloc.city_name=washington;toloc.city_name=san francisco;flight_mod=latest,11
+what is the earliest flight from boston to atlanta,flight,flight_mod=earliest;fromloc.city_name=boston;toloc.city_name=atlanta,11
