@@ -63,7 +63,7 @@ train_sub, val_sub = train_test_split(train_df, test_size=0.2, shuffle=True, ran
 
 
 # 6. Save to CSV
-OUTPUT_DIR = "ATIS_dataset/data/"
+OUTPUT_DIR = "data/"
 train_sub.to_csv(OUTPUT_DIR + "atis_train.csv", index=False)
 val_sub.to_csv(OUTPUT_DIR + "atis_val.csv", index=False)
 test_df.to_csv(OUTPUT_DIR + "atis_test.csv", index=False)
