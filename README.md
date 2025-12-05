@@ -13,7 +13,7 @@ This repository contains the implementation of bidirectional LSTM models for int
 ├── preprocessing.py               # Data loading, normalization, and splitting
 ├── token_and_augment.py          # Tokenization and data augmentation utilities
 ├── build_vocab.py                # Vocabulary construction from training data
-├── evaluation.py                 # Evaluation metrics and confusion matrix generation
+├── evaluation.py                 # Evaluation metrics and confusion matrix generation for LiSTM
 ├── bilstm_single.py              # Single-layer BiLSTM training script
 ├── bilstm_double.py              # Two-layer BiLSTM training script
 ├── bilstm_attention.py           # BiLSTM with attention mechanism training script
@@ -111,7 +111,7 @@ Constructs vocabulary mappings from training data:
 This module is imported and called within training scripts but is **not run standalone**.
 
 ### `evaluation.py`
-Computes evaluation metrics and generates confusion matrices:
+Computes evaluation metrics and generates confusion matrices for LiSTM models:
 - Overall accuracy, macro/weighted precision, recall, F1
 - Per-class classification reports
 - Confusion matrix generation and visualization
