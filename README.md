@@ -49,16 +49,7 @@ git clone https://github.com/sarapirast/EE-541-Final-Project.git
 cd EE-541-Final-Project
 ```
 
-2. **Download ATIS dataset**:
-   - Place the ATIS dataset in Rasa format under `ATIS_dataset/data/standard_format/rasa/`
-   - Required files: `train.json` and `test.json`
-
-2. **Create output directories**:
-```bash
-mkdir -p data paths plots
-```
-
-3. **Preprocess the data**:
+2. **Preprocess the data**:
 ```bash
 python preprocessing.py
 ```
