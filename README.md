@@ -214,7 +214,7 @@ Augmentation is applied on-the-fly during training with `augment_frac=1.0`, effe
 
 ## Model Architectures
 
-### BiLSTM-1Layer (Baseline)
+### BiLSTM-1Layer 
 ```
 Input → Embedding(200) → BiLSTM(128) → Dropout(0.3) → FC(num_classes)
 ```
