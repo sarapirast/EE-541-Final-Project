@@ -66,6 +66,8 @@ This generates:
 - `data/atis_val.csv` (20% of training data for validation)
 - `data/atis_test.csv` (held-out test set)
 
+**Important**: You must run `preprocessing.py` before training any models, as the training scripts depend on the generated CSV files.
+
 ## Data Format
 
 ### Input Format (Rasa JSON)
@@ -87,11 +89,46 @@ After preprocessing, each CSV contains:
 3. **Tokenization**: Lowercasing, punctuation handling, month removal
 4. **Stratified splitting**: 80/20 train/val split maintaining class proportions
 
+## Utility Modules
+
+The following utility modules are used by the training scripts and must be present in the repository:
+
+### `token_and_augment.py`
+Provides tokenization and data augmentation functions:
+- **Tokenization**: Cleans and tokenizes ATIS queries (lowercasing, punctuation handling, month removal)
+- **Data augmentation**: Applies synonym replacement, random deletion, and random insertion
+- **Sequence conversion**: Converts tokenized text to padded integer indices for model input
+
+This module is imported by all training scripts but is **not run standalone**.
+
+### `build_vocab.py`
+Constructs vocabulary mappings from training data:
+- Builds word→index and index→word dictionaries
+- Handles special tokens (`<pad>`, `<unk>`)
+- Applies minimum frequency threshold
+
+This module is imported and called within training scripts but is **not run standalone**.
+
+### `evaluation.py`
+Computes evaluation metrics and generates confusion matrices:
+- Overall accuracy, macro/weighted precision, recall, F1
+- Per-class classification reports
+- Confusion matrix generation and visualization
+
+This module is imported and called at the end of each training script but is **not run standalone**.
+
+**Note**: These three utility modules (`token_and_augment.py`, `build_vocab.py`, `evaluation.py`) are automatically imported and used by the training scripts. You do not need to run them separately.
+
 ## Running the Code
 
-### Training Models
+### Complete Workflow
 
-Each model has its own training script with identical hyperparameters for fair comparison:
+1. **Preprocess the data** (required first step):
+```bash
+python preprocessing.py
+```
+
+2. **Train models** (each script imports and uses the utility modules automatically):
 
 **Single-layer BiLSTM**:
 ```bash
@@ -112,6 +149,18 @@ python bilstm_attention.py
 ```bash
 python transformer_encoder.py
 ```
+
+### What Each Training Script Does
+
+Each training script automatically:
+1. Loads preprocessed CSVs from `data/` (requires `preprocessing.py` to have been run)
+2. Imports and uses `build_vocab()` to build vocabulary from training data
+3. Imports and uses `augment_dataframe()` from `token_and_augment.py` to augment training data
+4. Creates PyTorch DataLoaders with tokenization via `token_and_augment()`
+5. Trains model for 20 epochs with class-weighted loss
+6. Saves best model checkpoint to `paths/<model_name>.pt`
+7. Imports and uses `evaluate()` to compute metrics on test set
+8. Generates plots (loss curves, confusion matrix) in `plots/`
 
 ### Training Outputs
 
@@ -209,7 +258,7 @@ Metrics are computed on the held-out test set using the best model checkpoint (s
 
 To reproduce the main results from the project report:
 
-1. **Run preprocessing** with the provided ATIS dataset:
+1. **Preprocess the data**:
 ```bash
 python preprocessing.py
 ```
@@ -249,7 +298,7 @@ All training uses `seed=42` for reproducibility, but perfect bit-for-bit reprodu
 ## Code Organization Notes
 
 - **Modular design**: Separate files for preprocessing, tokenization, vocabulary, evaluation, and model training
-- **Shared utilities**: `token_and_augment.py`, `build_vocab.py`, and `evaluation.py` are reused across all models
+- **Shared utilities**: `token_and_augment.py`, `build_vocab.py`, and `evaluation.py` are reused across all models via imports
 - **Consistent interface**: All training scripts follow the same structure (data loading → model definition → training loop → evaluation)
 - **Class weighting**: Inverse frequency weighting applied in loss function to handle class imbalance
 
@@ -257,3 +306,4 @@ All training uses `seed=42` for reproducibility, but perfect bit-for-bit reprodu
 
 - **GPU recommended**: Training on CPU is significantly slower
 - **PyTorch version**: Tested on PyTorch 2.0+; earlier versions may have compatibility issues
+
