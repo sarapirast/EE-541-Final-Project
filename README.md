@@ -45,20 +45,20 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn tqdm regex
 
 1. **Clone the repository**:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/sarapirast/EE-541-Final-Project.git
+cd EE-541-Final-Project
 ```
 
 2. **Download ATIS dataset**:
    - Place the ATIS dataset in Rasa format under `ATIS_dataset/data/standard_format/rasa/`
    - Required files: `train.json` and `test.json`
 
-3. **Create output directories**:
+2. **Create output directories**:
 ```bash
 mkdir -p data paths plots
 ```
 
-4. **Preprocess the data**:
+3. **Preprocess the data**:
 ```bash
 python preprocessing.py
 ```
