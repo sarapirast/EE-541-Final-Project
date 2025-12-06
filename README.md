@@ -17,7 +17,7 @@ This repository contains the implementation of bidirectional LSTM models for int
 ├── bilstm_single.py              # Single-layer BiLSTM training script
 ├── bilstm_double.py              # Two-layer BiLSTM training script
 ├── bilstm_attention.py           # BiLSTM with attention mechanism training script
-├── transformer_encoder.py        # Transformer encoder training script
+├── transformerr.py               # Transformer script
 ├── baseline.py                   # Baseline logistic regression script
 └── README.md                     # This file
 ```
@@ -34,6 +34,7 @@ matplotlib>=3.6.0
 seaborn>=0.12.0
 tqdm>=4.65.0
 regex>=2022.10.31
+torchtext>=18.0
 ```
 
 Install all dependencies:
@@ -138,9 +139,9 @@ python bilstm_attention.py
 ```
 
 **Transformer Encoder**:
-```bash
-python transformer_encoder.py
-```
+
+run transformer.ipynb
+run train_transformer.ipynb
 
 ### What Each Training Script Does
 
@@ -260,8 +261,8 @@ python preprocessing.py
 python bilstm_single.py
 python bilstm_double.py
 python bilstm_attention.py
-python transformer_encoder.py
 ```
+run train_transformer.ipynb
 
 3. **Expected results** (approximate, due to random initialization):
 
