@@ -270,7 +270,7 @@ python transformer_encoder.py
 | BiLSTM-1Layer | 96.30% | 88.50% | 85.36% | 84.23% |
 | BiLSTM-2Layer | 95.74% | 89.02% | 86.77% | 85.58% |
 | BiLSTM-Attention | 95.96% | 88.72% | 81.02% | 81.73% |
-| Transformer | TBD | TBD | TBD | TBD |
+| Transformer | 94.95% | 82.88% | 72.69% | 94.70% |
 
 **Note**: Results may vary slightly (±0.5-1.0%) due to:
 - Random weight initialization
