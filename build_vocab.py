@@ -33,7 +33,7 @@ def build_vocab(csv_path, min_freq=1, save_json=False, json_path="vocab.json"):
 
     print(f"[build_vocab] vocab size = {len(vocab)} (min_freq={min_freq})")
 
-    # Optionally save the vocab as JSON
+    # Save the vocab as JSON
     if save_json:
         with open(json_path, "w") as f:
             json.dump({"word2idx": word2idx, "idx2word": idx2word}, f, indent=2)

@@ -71,7 +71,7 @@ def evaluate(model, data_loader, label_encoder, device="cpu", plot_cm=False):
     cm = confusion_matrix(all_labels, all_preds)
 
 
-    # Optional Confusion Matrix plot
+    # Confusion Matrix plot
     if plot_cm:
         plt.figure(figsize=(10,8))
         sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=target_names, yticklabels=target_names)
